@@ -1,3 +1,45 @@
 <% if policy(Flat).create? %>
   <%= link_to "Nouvel appartement", new_flat_path %>
 <% end %>
+<div class="box">
+  <div class="add-image">
+    <h1 class="add-title">Veuillez proposer votre appartement</h1>
+    </div>
+  <div class="add-form container col-sm-8 col-lg-4">
+      <%= simple_form_for (@flat) do |f| %>
+        <div class="row">
+          <div class="col">
+            <%= f.input :address, label: "Adresse"%>
+          </div>
+          <div class="col">
+            <%= f.input :typology, collection: Flat::TYPOLOGY,label: "Typologie du bien" %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <%= f.input :area, label: "Surface" %>
+          </div>
+          <div class="col">
+            <%= f.input :rent, label: "Prix du loyer" %>
+          </div>
+          <div class="col">
+            <%= f.input :rental_charges, label: "Charges à payer" %>
+          </div>
+        </div>
+        <div class="col">
+            <%= f.input :current_state, collection: Flat::CURRENT_STATE, label: "Etat actuel" %>
+          </div>
+          <div class="col">
+            <%= f.input :appartement_condition, collection: Flat::APPARTEMENT_CONDITION, label: "Condition de l'appartement" %>
+          </div>
+        <div class="col">
+            <%= f.input :origin_contact, collection: Flat::ORIGIN_CONTACT, label: "Comment avez vous entendu parler de nous?" %>
+          </div>
+        <%= f.input :message, label: "Message"  %>
+          <div class="new-form-buttons">
+          <%= f.submit "Proposer", class: "btn submit-new our-button"  %>
+        </div>
+      <% end %>
+  </div>
+</div>
