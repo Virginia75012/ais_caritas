@@ -1,1 +1,8 @@
 // Specific CSS for your home-page
+body {
+  background-color: #fff;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 70px - 80px);
+}

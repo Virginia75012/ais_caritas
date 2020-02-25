@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: center;
   background: white;
 }
 
@@ -9,4 +9,18 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-brand {
+  margin-right: 0;
+  margin: auto 19px;
+}
+
+li.nav-item {
+  margin-top: 14px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $blue;
+  font-size: 15px;
 }
