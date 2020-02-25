@@ -2,7 +2,8 @@ class FlatsController < ApplicationController
   def index
     @flats = policy_scope(Flat)
   end
-def new
+
+  def new
     @flat = Flat.new
     authorize @flat
   end
