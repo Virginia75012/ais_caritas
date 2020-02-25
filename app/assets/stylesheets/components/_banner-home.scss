@@ -12,24 +12,15 @@
     font-weight: bold;
 
   }
-  p{
+  h2 {
     color: $orange;
     font-size: 25px;;
     font-weight: bold;
-    line-height: 12px
   }
 }
 
 .banner-content {
   margin: 16% 3%;
-}
-
-.logo {
-  width: 100px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 90%;
-  left: 46%;
 }
 
 .title-home {
@@ -45,12 +36,8 @@
     font-size: 30px;
   }
 
-  .banner-content p {
-    font-size: 16px;
+  .banner-content h2 {
+    font-size: 18px;
   }
 
-  .logo {
-    width: 80px;
-    left: 40%;
-  }
 }
