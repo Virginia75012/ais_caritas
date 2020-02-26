@@ -1,0 +1,23 @@
+.footer {
+  background-color: $blue;
+  height: 150px;
+  padding: 0px 50px 0 50px;
+  display: flex;
+  align-items: center;
+  color: $orange;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link{
+  color: $orange;
+}
+
+.footer-link {
+  color: $orange;
+  padding-bottom: 84px;
+}
+
+.footer-logo {
+ padding-top: 50px;
+}
