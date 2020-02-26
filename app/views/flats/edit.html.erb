@@ -7,7 +7,7 @@
             <%= f.input :title, label: "title"%>
           </div>
           <div class="col">
-            <%= f.input :address, label: "Adresse"%>
+            <%= f.input :address, label: "Adresse", id: "flat_address"%>
           </div>
           <div class="col">
             <%= f.input :typology, collection: Flat::TYPOLOGY,label: "Typologie du bien" %>
@@ -33,7 +33,10 @@
           </div>
         <div class="col">
             <%= f.input :origin_contact, collection: Flat::ORIGIN_CONTACT, label: "Comment avez vous entendu parler de nous?" %>
-          </div>
+        </div>
+        <div class="col">
+          <%= f.input :photo, as: :file, name: 'Photo' %>
+        </div>
         <%= f.input :message, label: "Message"  %>
       <%= f.submit "Modifier", class: "btn btn-primary submit-new"  %>
     <% end %>

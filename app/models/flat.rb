@@ -1,6 +1,8 @@
 class Flat < ApplicationRecord
   belongs_to :user
   has_many_attached :photos
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   TYPOLOGY = ["studio", "t1", "t2", "t3", "t4", "t5"]
   CURRENT_STATE = ["libre", "occupe"]
