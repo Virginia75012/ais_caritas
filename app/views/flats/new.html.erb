@@ -9,6 +9,9 @@
       <%= simple_form_for (@flat) do |f| %>
         <div class="row">
           <div class="col">
+            <%= f.input :title, label: "title"%>
+          </div>
+          <div class="col">
             <%= f.input :address, label: "Adresse"%>
           </div>
           <div class="col">
