@@ -8,7 +8,9 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 2vh;
 }
+
 .nav-link{
   color: $orange;
 }
@@ -21,3 +23,9 @@
 .footer-logo {
  padding-top: 50px;
 }
+
+.content-wrapper {
+  min-height: calc(100vh - 300px);
+}
+
+
