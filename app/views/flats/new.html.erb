@@ -39,7 +39,10 @@
         <div class="col">
             <%= f.input :origin_contact, collection: Flat::ORIGIN_CONTACT, label: "Comment avez vous entendu parler de nous?" %>
           </div>
-        <%= f.input :message, label: "Message"  %>
+          <div class="col">
+          <%= f.input :photo, as: :file, name: 'Photo' %>
+          </div>
+          <%= f.input :message, label: "Message"  %>
           <div class="new-form-buttons">
           <%= f.submit "Proposer", class: "btn submit-new our-button"  %>
         </div>
