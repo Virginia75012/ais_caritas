@@ -1,20 +1,31 @@
-
-<div class="card-product">
-  <% @flats.each do |flat| %>
-    <% flat.photos.each do |photo| %>
-     <%= cl_image_tag photo.key %>
-    <% end %>
-    <div class="card-product-infos">
-      <h2><%= flat.title %></h2>
-      <p><%= flat.address %></p>
-      <p><%= flat.area %></p>
-      <p><%= flat.typology %></p>
+<div class="container flats">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-xs-4 mt-5 flats">
+        <div class="card-flat">
+          <% flat.photos.each do |photo| %>
+          <%= cl_image_tag photo.key %>
+          <% end %>
+        <div class="card-flat-infos">
+          <h2><%= flat.title %></h2>
+          <p><%= flat.address %></p>
+          <p><%= flat.area %></p>
+          <p><%= flat.typology %></p>
+        </div>
+        <div class="container icons">
+          <p><%= link_to flat_path(flat), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-flat our-button' do %>
+            <i class="far fa-trash-alt"></i>
+            <% end %>
+            <%= link_to edit_flat_path(flat), class: 'btn btn-flat our-button' do %>
+            <i class="far fa-edit"></i>
+            <% end %>
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="container d-flex justify-content-center">
-      <p>
-        <%= link_to 'Supprimer', flat_path(flat), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-flat our-button' %>
-        <%= link_to 'Modifier', edit_flat_path(flat), class: 'btn btn-flat our-button' %>
-      </p>
-  <% end %>
+    <% end %>
+  </div>
 </div>
+
+
 

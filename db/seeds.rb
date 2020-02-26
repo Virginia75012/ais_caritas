@@ -20,7 +20,7 @@ benjamin = User.create!(first_name: "benjamin", last_name: "dupont", email: "pdp
 xavier = User.create!(first_name: "xavier", last_name: "tl", email: "xavier@tl.com", password: "123456")
 
 puts "creating gp..."
-beau = Flat.create!(user: pamela, typology: "t2", area: "30", title:"Jolie appartement", address: "3 rue roger Salengro creteil", rent: 300, rental_charges: 26, current_state: "libre", appartement_condition: "travaux", message: "bla", origin_contact: "autre")
+beau = Flat.create!(user: pamela, typology: "t2", area: "30", title:"Jolie appartement", address: "3 rue roger Salengro creteil", rent: 300, rental_charges: 26, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 
 
 
