@@ -1,5 +1,6 @@
 class Flat < ApplicationRecord
   belongs_to :user
+  has_many_attached :photos
 
   TYPOLOGY = %w[studio t1 t2 t3 t4 t5]
   CURRENT_STATE = %w[libre occupé]
