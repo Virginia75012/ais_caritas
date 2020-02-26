@@ -1,0 +1,51 @@
+.title-owner {
+  color: $blue;
+  text-align: center;
+}
+
+.owner-image {
+  width: 647px;
+  height: 520px;
+}
+
+.content-container {
+  border: 1px solid red;
+  position: relative;
+  height: 1600px;
+}
+
+.content {
+  position: absolute;
+  width: 647px;
+  height: 520px;
+}
+
+#image-owner {
+ border: 1px solid;
+
+}
+
+#avantages {
+  border: 1px solid white;
+  right: 1px;
+  bottom: 648px;
+  border-radius: 3px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 3px 4px 5px 3px #868282;
+  padding: 15px;
+}
+
+#fiscality{
+ border: 1px solid white;
+ bottom: 196px;
+ border-radius: 3px;
+ z-index: 3;
+ background-color: white;
+ box-shadow: 3px 4px 5px 3px #868282;
+ padding: 15px;
+ }
+
+.btn-owner {
+
+}
