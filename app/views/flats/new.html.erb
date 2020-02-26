@@ -12,7 +12,7 @@
             <%= f.input :title, label: "title"%>
           </div>
           <div class="col">
-            <%= f.input :address, label: "Adresse"%>
+            <%= f.input :address, label: "Adresse", id: "flat_address" %>
           </div>
           <div class="col">
             <%= f.input :typology, collection: Flat::TYPOLOGY,label: "Typologie du bien" %>
