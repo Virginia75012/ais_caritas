@@ -21,6 +21,9 @@ xavier = User.create!(first_name: "xavier", last_name: "tl", email: "xavier@tl.c
 
 puts "creating gp..."
 beau = Flat.create!(user: pamela, typology: "t2", area: "30", title:"Jolie appartement", address: "3 rue roger Salengro creteil", rent: 300, rental_charges: 26, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+moche = Flat.create!(user: pamela, typology: "t3", area: "37", title:"Bel emplacement", address: "13 avenue daumesnil paris", rent: 400, rental_charges: 260, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+normal = Flat.create!(user: pamela, typology: "t4", area: "70", title:"Idéal famille", address: "94 rue du faubourg saint-antoine paris", rent: 1000, rental_charges: 400, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+waou = Flat.create!(user: pamela, typology: "t2", area: "32", title:"Bien agencé", address: "18 boulevard soult paris", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 
 
 
@@ -47,4 +50,17 @@ xavier.save
 file = URI.open("https://www.vanupied.com/wp-content/uploads/68550354.jpg")
 beau.photos.attach(io: file, filename: "beau_photo")
 beau.save
+
+file = URI.open("https://www.realites.com/uploads/media/operation/0001/20/thumb_19457_operation_349x249.jpeg")
+moche.photos.attach(io: file, filename: "moche_photo")
+moche.save
+
+file = URI.open("https://img.netty.immo/productw/pietrapolis/20/VA28296/appartement-t1-lyon-vente-1564693658-VA28296_2_l.jpg")
+normal.photos.attach(io: file, filename: "normal_photo")
+normal.save
+
+file = URI.open("https://q-xx.bstatic.com/xdata/images/hotel/840x460/118594458.jpg?k=b97e932dc729bb39042dde4458c764a91e2c6aa1cbe631aa5e424b1fa0347f6f&o=")
+waou.photos.attach(io: file, filename: "waou_photo")
+waou.save
+
 
