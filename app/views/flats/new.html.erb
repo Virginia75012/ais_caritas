@@ -4,7 +4,7 @@
 <div class="box">
   <div class="add-image">
     <h1 class="add-title">Veuillez proposer votre appartement</h1>
-    </div>
+  </div>
   <div class="add-form container col-sm-8 col-lg-4">
       <%= simple_form_for (@flat) do |f| %>
         <div class="row">
@@ -40,7 +40,7 @@
             <%= f.input :origin_contact, collection: Flat::ORIGIN_CONTACT, label: "Comment avez vous entendu parler de nous?" %>
           </div>
           <div class="col">
-          <%= f.input :photo, as: :file, name: 'Photo' %>
+          <%= f.input :photos, as: :file, name: 'Photo' %>
           </div>
           <%= f.input :message, label: "Message"  %>
           <div class="new-form-buttons">
