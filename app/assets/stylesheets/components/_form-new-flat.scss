@@ -1,0 +1,29 @@
+.box {
+  margin-top: 36px;
+}
+
+.box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: $blue;
+  text-align: center;
+}
+
+.flat_message label {
+  visibility:hidden;
+}
+
+.submit-new {
+  margin-bottom: 4vh;
+  padding: 13px 5px;
+}
+
+
+.new-form-buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
