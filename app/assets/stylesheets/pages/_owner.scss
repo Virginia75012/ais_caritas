@@ -1,6 +1,7 @@
 .title-owner {
   color: $blue;
   text-align: center;
+  margin-top: 30px;
 }
 
 .owner-image {
@@ -9,9 +10,10 @@
 }
 
 .content-container {
-  border: 1px solid red;
+  border: 1px solid white;
   position: relative;
   height: 1600px;
+  margin-top: 30px;
 }
 
 .content {
@@ -21,7 +23,7 @@
 }
 
 #image-owner {
- border: 1px solid;
+ border: 1px solid white;
 
 }
 
@@ -47,5 +49,7 @@
  }
 
 .btn-owner {
-
+  position: absolute;
+  bottom: 80px;
+  right: 50%;
 }
