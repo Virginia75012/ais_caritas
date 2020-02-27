@@ -29,8 +29,55 @@
 
 
     <div class="btn-owner">
-      <%= submit_tag "Simulation", class: "our-button"%>
-      <%= link_to 'Proposer', new_flat_path(@flat), class: 'our-button' %>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn our-button" data-toggle="modal" data-target="#exampleModalLong">
+       Simulation
+      </button>
+      <%= link_to 'Proposer', new_flat_path(@flat), class: 'btn our-button' %>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Lancez votre simulation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="explain"><p>Faites une simulation sur votre rendement locatif et estimez votre déduction fisacle si vous louez par l'indermédiaire de notre agence.</p></div>
+
+        <form class="range-field my-5">
+          <label for="calculatorSlider1">Indiquez le nombre de m²</label>
+          <input id="calculatorSlider1" class="no-border w-100" type="range" value="0" min="15" max="150" />
+        </form>
+
+        <form class="range-field my-5">
+          <label for="calculatorSlider2">Indiquez le pourcentage souhaitez de déduction d'impôts</label>
+          <input id="calculatorSlider2" class="no-border w-100" type="range" value="0" min="15" max="85" />
+        </form>
+
+        <div class="row">
+          <div class="col">
+            <h2><span class="badge blue lighten-2 mb-4">You earn</span></h2>
+            <h2 class="display-4" style="color:#0d47a1"><strong id="resellerEarnings">75$</strong></h2>
+          </div>
+
+          <div class="col">
+            <h2><span class="badge blue lighten-2 mb-4">Client pays</span></h2>
+            <h2 class="display-4" style="color:#0d47a1"><strong id="clientPrice">319$</strong></h2>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-primary">Sauvegarder</button>
+      </div>
     </div>
   </div>
 </div>
