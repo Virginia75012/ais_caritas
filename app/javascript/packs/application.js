@@ -25,8 +25,22 @@ import "bootstrap";
 
 import { loadDynamicBannerText } from '../components/banner';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initAutocomplete();
+});
+
+initSweetalert('#sweet-alert-trash', {
+  title: "Voulez-vous supprimer cet appartement ?",
+  text: "Cette action sera irréversible",
+  buttons: ["Fermer", "Supprimer"],
+  dangerMode: true,
+  icon: "warning"
+}, (value) => {
+  if (value) {
+    const link = document.querySelector('#delete-link');
+    link.click();
+  }
 });
