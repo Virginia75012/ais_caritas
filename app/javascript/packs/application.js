@@ -32,7 +32,11 @@ document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
 });
 
-initSweetalert('#sweet-alert-trash', {
+
+const trashButtons = document.querySelectorAll('[id^="sweet-alert-trash"]');
+
+trashButtons.forEach((trashButton) => {
+  initSweetalert(`#${trashButton.id}`, {
   title: "Voulez-vous supprimer cet appartement ?",
   text: "Cette action sera irréversible",
   buttons: ["Fermer", "Supprimer"],
@@ -44,3 +48,5 @@ initSweetalert('#sweet-alert-trash', {
     link.click();
   }
 });
+});
+
