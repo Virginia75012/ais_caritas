@@ -1,49 +1,6 @@
 <div class="box">
   <div class="add-image">
-    <h2>PROPOSER VOTRE LOGEMENET</h>
+    <h2>PROPOSER VOTRE LOGEMENT</h>
   </div>
-
-  <div class="add-form container col-sm-8 col-lg-6">
-      <%= simple_form_for (@flat) do |f| %>
-        <div class="row">
-          <div class="col">
-            <%= f.input :title, label: "Titre de votre annonce"%>
-          </div>
-          <div class="col">
-            <%= f.input :address, label: "Adresse", id: "flat_address" %>
-          </div>
-       </div>
-
-        <div class="row">
-            <div class="col">
-            <%= f.input :typology, collection: Flat::TYPOLOGY,label: "Typologie du bien" %>
-          </div>
-          <div class="col">
-            <%= f.input :area, label: "Surface*", hint:"*(en m²)" %>
-          </div>
-          <div class="col">
-            <%= f.input :rent, label: "Prix du loyer" %>
-          </div>
-          <div class="col">
-            <%= f.input :rental_charges, label: "Montant des charges" %>
-          </div>
-        </div>
-        <div class="col">
-            <%= f.input :current_state, collection: Flat::CURRENT_STATE, label: "Etat actuel" %>
-          </div>
-          <div class="col">
-            <%= f.input :appartement_condition, collection: Flat::APPARTEMENT_CONDITION, label: "Etat du bien" %>
-          </div>
-        <div class="col">
-            <%= f.input :origin_contact, collection: Flat::ORIGIN_CONTACT, label: "Comment avez vous entendu parler de nous ?" %>
-          </div>
-          <div class="col">
-              <%= f.input :photo, as: :file, name: 'Photo' %>
-          </div>
-          <%= f.input :message, placeholder: "Ecrivez votre message..." %>
-          <div class="new-form-buttons">
-          <%= f.submit "Proposer", class: "btn submit-new our-button"  %>
-        </div>
-      <% end %>
-  </div>
+    <%= render 'flats/form' %>
 </div>

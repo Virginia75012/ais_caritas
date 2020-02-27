@@ -1,45 +1,7 @@
 <div class="box">
-    <h1 class="add-title">Modifier l'Annonce</h1>
-  <div class="add-form container col-sm-8 col-lg-4">
-      <%= simple_form_for (@flat) do |f| %>
-        <div class="row">
-          <div class="col">
-            <%= f.input :title, label: "title"%>
-          </div>
-          <div class="col">
-            <%= f.input :address, label: "Adresse", id: "flat_address"%>
-          </div>
-          <div class="col">
-            <%= f.input :typology, collection: Flat::TYPOLOGY,label: "Typologie du bien" %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <%= f.input :area, label: "Surface" %>
-          </div>
-          <div class="col">
-            <%= f.input :rent, label: "Prix du loyer" %>
-          </div>
-          <div class="col">
-            <%= f.input :rental_charges, label: "Charges à payer" %>
-          </div>
-        </div>
-        <div class="col">
-            <%= f.input :current_state, collection: Flat::CURRENT_STATE, label: "Etat actuel" %>
-          </div>
-          <div class="col">
-            <%= f.input :appartement_condition, collection: Flat::APPARTEMENT_CONDITION, label: "Condition de l'appartement" %>
-          </div>
-        <div class="col">
-            <%= f.input :origin_contact, collection: Flat::ORIGIN_CONTACT, label: "Comment avez vous entendu parler de nous?" %>
-        </div>
-        <div class="col">
-          <%= f.input :photos, as: :file, name: 'Photo' %>
-        </div>
-        <%= f.input :message, label: "Message"  %>
-      <%= f.submit "Modifier", class: "btn btn-primary submit-new"  %>
-    <% end %>
+  <div class="add-image">
+    <h2>MODIFIER MON ANNONCE</h>
   </div>
+    <%= render 'flats/form' %>
 </div>
 
