@@ -1,6 +1,6 @@
 .footer {
-  background-color: $blue;
-  height: 150px;
+  background-color: $orange;
+  height: 1p00x;
   padding: 0px 50px 0 50px;
   display: flex;
   align-items: center;
@@ -12,20 +12,26 @@
 }
 
 .nav-link{
-  color: $orange;
+  color: $blue;
+  font-size: 16px;
 }
 
 .footer-link {
-  color: $orange;
-  padding-bottom: 84px;
+  color: $blue;
+  padding-bottom: 40px;
 }
 
 .footer-logo {
  padding-top: 50px;
+ color: $blue;
 }
 
 .content-wrapper {
   min-height: calc(100vh - 300px);
+}
+
+.nav-link:hover {
+  color: #000;
 }
 
 

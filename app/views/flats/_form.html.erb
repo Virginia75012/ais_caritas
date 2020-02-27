@@ -33,7 +33,12 @@
             <%= f.input :origin_contact, collection: Flat::ORIGIN_CONTACT, label: "Comment avez vous entendu parler de nous ?" %>
           </div>
           <div class="col">
-              <%= f.input :photo, as: :file, name: 'Photo' %>
+            <label class="btn btn-outline-info" style="style: width: 100%">
+              Ajouter une photo <em> (10.5 Mb max.)</em>
+              <span style="display:none;">
+                <%= f.input :photos, as: :file, name: 'Photo' %>
+              </span>
+            </label>
           </div>
           <%= f.input :message, placeholder: "Ecrivez votre message..." %>
           <div class="new-form-buttons">

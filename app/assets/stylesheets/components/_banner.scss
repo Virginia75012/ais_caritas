@@ -20,7 +20,9 @@
 }
 
 .banner-content {
-  margin: 16% 3%;
+  position: absolute;
+  top: 110px;
+  left: 25px;
 }
 
 .title-home {
@@ -28,6 +30,26 @@
   font-family: $headers-font;
   text-align: center;
   color: $blue;
+}
+
+.banner-about {
+  height: 40vh !important;
+  background-image: image-url("about.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner-owner {
+  height: 60vh !important;
+  background-image: image-url("owner.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title-about h2 {
+  color: $blue;
+  font-family: $headers-font;
+  font-size: 2rem;
 }
 
 /** MEDIA QUERIES **/
