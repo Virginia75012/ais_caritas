@@ -8,6 +8,7 @@
   align-items: center;
   margin: 30px;
   position: relative;
+  border-radius: 8px;
 }
 
 .card-flat img {
@@ -23,8 +24,8 @@
 }
 
 .card-flat p {
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.2;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
@@ -40,4 +41,29 @@
   left: 345px;
 }
 
+.add {
+  padding: 25px 20px;
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+  6px 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  .text-center {
+    font-family: $headers-font;
+    color: $blue;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.flats {
+  margin-top: 20px;
+}
+
+.add:hover {
+  transform: scale(0.98);
+}
+
+.text-center h2 {
+  color: $blue;
+}
 

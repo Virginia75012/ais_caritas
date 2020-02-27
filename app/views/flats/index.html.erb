@@ -1,4 +1,20 @@
 <div class="container flats">
+  <div class="text-center mt-5">
+      <h2>MES APPARTEMENTS</h2>
+      <hr>
+    </div>
+  <div class="row">
+    <div class="col-xs-6 mx-auto">
+      <%= link_to new_flat_path, class: "text-decoration-none" do %>
+      <div class="container-fluid add">
+        <div class="text-center">
+          <img src="https://image.flaticon.com/icons/svg/1828/1828817.svg" alt="" style="width: 30px;"></div>
+          <div class="text-center mt-3">Ajouter un nouveau logement</div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
   <div class="row">
     <% @flats.each do |flat| %>
       <div class="col-xs-4 mt-5 flats">
@@ -9,13 +25,18 @@
         <div class="card-flat-infos">
           <h2><%= flat.title %></h2>
           <p><%= flat.address %></p>
-          <p><%= flat.area %></p>
+          <p><%= flat.area %>m²</p>
           <p><%= flat.typology %></p>
         </div>
         <div class="container icons">
-          <p><%= link_to flat_path(flat), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-flat our-button' do %>
-            <i class="far fa-trash-alt"></i>
+          <p>
+            <button id="sweet-alert-trash" class="btn btn-flat our-button"><i class="far fa-trash-alt"></i></button>
+
+
+            <%= link_to flat_path(flat), method: :delete, id: "delete-link",class: 'hidden' do %>
+
             <% end %>
+
             <%= link_to edit_flat_path(flat), class: 'btn btn-flat our-button' do %>
             <i class="far fa-edit"></i>
             <% end %>
@@ -26,6 +47,8 @@
     <% end %>
   </div>
 </div>
+
+
 
 
 
