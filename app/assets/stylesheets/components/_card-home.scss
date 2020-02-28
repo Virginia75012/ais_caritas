@@ -23,7 +23,7 @@
 .card .contentBx h3 {
   color: $blue;
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: 1.34em;
   letter-spacing: 2px;
   font-family: $headers-font;
 }
@@ -55,12 +55,10 @@
   inset 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .container .card a:hover span {
   display: block;
   transform: scale(0.98);
 }
-
 
 .container .card:hover .icon,
 .container .card:hover .contentBx {
