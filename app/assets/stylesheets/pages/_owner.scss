@@ -2,6 +2,7 @@
   color: $blue;
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .owner-image {
@@ -12,7 +13,7 @@
 .content-container {
   border: 1px solid white;
   position: relative;
-  height: 1600px;
+  height: 1250px;
   margin-top: 30px;
 }
 
@@ -22,10 +23,6 @@
   height: 520px;
 }
 
-#image-owner {
- border: 1px solid white;
-
-}
 
 #avantages {
   border: 1px solid white;
@@ -52,4 +49,6 @@
   position: absolute;
   bottom: 80px;
   right: 50%;
+
 }
+
