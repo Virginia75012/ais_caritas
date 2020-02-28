@@ -12,9 +12,7 @@
   <div class="banner-owner text-center"></div>
 
   <div class="content-container">
-    <div class="content" id="image-owner">
-        <%= image_tag "owner.png", class: "owner-image"%>
-    </div>
+
     <div class="content" id="avantages">
        <h3><strong>Vos avantages :</strong></h3>
         <li>Sécurisation des risques locatifs (Impayés de loyer, dégradations, Vacance locative)</li>
@@ -36,11 +34,9 @@
     </div>
 
 
-    <div class="btn-owner d-flex m-auto">
+    <div class="btn-owner">
       <!-- Button trigger modal -->
-      <button type="button" class="btn our-button" data-toggle="modal" data-target="#exampleModalLong">
-       Simulation
-      </button>
+       <%= link_to 'Simulation', new_simulation_path, class: 'btn our-button' %>
       <%= link_to 'Proposer', new_flat_path(@flat), class: 'btn our-button' %>
     </div>
   </div>
