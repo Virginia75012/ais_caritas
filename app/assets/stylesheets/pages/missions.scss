@@ -1,0 +1,27 @@
+.title-missions {
+  color: $blue;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#garanty {
+  border: 1px solid white;
+  right: 1px;
+  bottom: 648px;
+  border-radius: 3px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 3px 4px 5px 3px #868282;
+  padding: 25px;
+}
+
+#technic {
+ border: 1px solid white;
+ bottom: 196px;
+ border-radius: 3px;
+ z-index: 3;
+ background-color: white;
+ box-shadow: 3px 4px 5px 3px #868282;
+ padding: 15px;
+}
