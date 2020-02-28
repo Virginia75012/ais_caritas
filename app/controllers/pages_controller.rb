@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :owner, :about ]
+  skip_before_action :authenticate_user!, only: [ :home, :owner, :about, :missions ]
 
   def home
   end
@@ -8,5 +8,8 @@ class PagesController < ApplicationController
   end
 
   def about
+  end
+
+  def missions
   end
 end

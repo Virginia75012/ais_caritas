@@ -53,6 +53,14 @@
   font-size: 2rem;
 }
 
+.banner-missions {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  background-image: image-url("mission.jpg");
+  background-size: cover;
+  background-position: center;
+}
 /** MEDIA QUERIES **/
 @media (max-width: 640px) {
   .banner-content h1 {
