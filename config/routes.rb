@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :flats, only: [:new, :create, :edit, :destroy, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :flats
+  resources :simulations, only: [:new]
 end
