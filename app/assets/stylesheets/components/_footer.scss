@@ -12,18 +12,25 @@
 }
 
 .nav-link{
-  color: $blue;
-  font-size: 16px;
+  color: #fff;
+  font-size: 18px;
 }
 
 .footer-link {
-  color: $blue;
+  color: #fff;
   padding-bottom: 40px;
 }
 
 .footer-logo {
  padding-top: 50px;
- color: $blue;
+ a {
+  color: #fff;
+  font-size: 18px;
+ }
+}
+
+.footer-logo a:hover {
+  color: #000;
 }
 
 .content-wrapper {

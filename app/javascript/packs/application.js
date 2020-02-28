@@ -29,6 +29,7 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 import { slide } from '../components/slider';
 
 
+
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initAutocomplete();
