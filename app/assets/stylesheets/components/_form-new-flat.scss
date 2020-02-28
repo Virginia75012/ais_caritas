@@ -25,5 +25,14 @@
   text-align: center;
 }
 
+.btn-outline-info {
+  color: $orange;
+  border-color: $orange;
+}
+
+.btn-outline-info:hover {
+  background-color: $orange;
+}
+
 
 

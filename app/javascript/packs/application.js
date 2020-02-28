@@ -26,10 +26,13 @@ import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initSweetalert } from '../plugins/init_sweetalert';
+import { slide } from '../components/slider';
+
 
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initAutocomplete();
+  slide();
 });
 
 
