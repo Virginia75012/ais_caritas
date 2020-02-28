@@ -11,24 +11,69 @@
 
           <div class="card-body">
             <h5 class="card-title">1 - Indiquez votre zone d'habitation*</h5>
-              <p class="card-text">Si vous ne connaissez pas votre zone, rendez-vous sur le site officiel<a href="https://www.service-public.fr/simulateur/calcul/zonage-abc">Service-Public</a></p>
-            <div class="buttons-zone">
-              <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">ZONE A</button>
-              <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">ZONE Abis</button>
+              <p class="card-text">Si vous ne connaissez pas votre zone, rendez-vous sur le site officiel <a href="https://www.service-public.fr/simulateur/calcul/zonage-abc" data-toggle="tooltip" data-html="true" title="Ce simulateur permet de connaître le type de zone (A, Abis, B1, B2 ou C) dont dépend le logement concerné.
+
+La zone détermine :
+
+• le revenu maximum pour avoir droit à un logement social (HLM) ;
+
+• le revenu maximum pour avoir droit au prêt à taux zéro (PZT) ou au prêt d’accession sociale (PAS) ;
+
+• pour un bailleur (bail d'habitation), le droit à une réduction d’impôt et les plafonds des loyers (dispositif Pinel à partir du 1er octobre 2014) ;
+
+• pour le bailleur d'un logement conventionné avec l'Anah : le droit à une déduction fiscale sur les revenus fonciers, le revenu maximum du futur locataire, le loyer initial maximum." target="_blank">Service-Public</a></p>
+            <div class="buttons-zone d-flex justify-content-around">
+              <button type="button" class="btn our-button" data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 140px;">ZONE A</button>
+              <button type="button" class="btn our-button" data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 140px;">ZONE Abis</button>
             </div>
           </div>
 
           <div class="card-body">
             <h5 class="card-title">2 - Indiquez la surface en m² de votre logement</h5>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <input type="range" min="15" max="150" value="50" class="slider" id="myRange">
               </div>
-
-
+               <div id="demo"></div>
           </div>
 
+          <div class="card-body">
+            <h5 class="card-title">3 - Choisissez parmis les 3 pourcentages de déduction d'impôts</h5>
+              <div class="row buttons">
+                <div class="col">
+                  <div class="buttons-percentage">
+                    <button type="button" class="btn our-button" data-toggle="button" aria-pressed="false" autocomplete="off">30%</button>
+                  </div>
+                </div>
+              <div class="col">
+                <div class="buttons-percentage">
+                    <button type="button" class="btn our-button" data-toggle="button" aria-pressed="false" autocomplete="off">70%</button>
+                </div>
+              </div>
+              <div class="col">
+                <div class="buttons-percentage">
+                    <button type="button" class="btn our-button" data-toggle="button" aria-pressed="false" autocomplete="off">85%</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="card-footer">
+            <h5 class="card-title">Résultats</h5>
+            </div>
+           <div class="card-body d-flex justify-content-around">
+            <div class="text-center d-flex flex-column">
+              <h5>Montant minimum du loyer</h5>
+             <div id="min-rent" class="d-flex align-items-center"><strong>735 €</strong></div>
+           </div>
 
-          <div id="demo"></div>
+           <div class="text-center">
+              <h5>Montant minimum du loyer</h5>
+             <div id="max-rent"><strong>833 €</strong></div>
+           </div>
+
+        </div>
+
+
+
 
 
 

@@ -23,7 +23,8 @@
  appearance: none;
  width: 25px; /* Set a specific slider handle width */
  height: 25px; /* Slider handle height */
- background: #4CAF50; /* Green background */
+ background: $blue; /* Green background */
+ border-radius: 50%;
  cursor: pointer; /* Cursor on hover */
 }
 .slider::-moz-range-thumb {
@@ -32,3 +33,23 @@
  background: #4CAF50; /* Green background */
  cursor: pointer; /* Cursor on hover */
 }
+
+.row.buttons {
+  margin-left: 14%;
+}
+
+#min-rent,
+#max-rent {
+  margin-left: 16px;
+  border: 1px solid lightgray;
+  width: 200px;
+  height: 90px;
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+  6px 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
