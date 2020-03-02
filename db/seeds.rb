@@ -14,7 +14,7 @@ puts "Users and flats destroyed !"
 
 puts "Creating users..."
 pamela = User.create!(first_name: "pamela", last_name: "prieur", email: "pamela.prieur@gmail.com", password: "123456")
-virginia = User.create!(first_name: "virginia", last_name: "atenza", email: "virginia.atenza@gmail.com", password: "123456")
+virginia = User.create!(first_name: "virginia", last_name: "atenza", email: "virginia.atenza@gmail.com", password: "123456", admin: true)
 ashley = User.create!(first_name: "ashley", last_name: "hoze", email: "ashleyhoze@gmail.com", password: "123456")
 benjamin = User.create!(first_name: "benjamin", last_name: "dupont", email: "pdp@gmail.com", password: "123456")
 xavier = User.create!(first_name: "xavier", last_name: "tl", email: "xavier@tl.com", password: "123456")
