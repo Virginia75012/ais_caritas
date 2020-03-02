@@ -29,12 +29,14 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 import { slide } from '../components/slider';
 import { trash } from '../components/trash';
 import { initSimulateur } from '../components/init_simulateur';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initAutocomplete();
   initSweetalert();
   slide();
+  initMapbox();
   trash();
   if(document.querySelector('.simu')){
     initSimulateur();
