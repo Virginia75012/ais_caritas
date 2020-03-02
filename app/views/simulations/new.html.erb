@@ -1,5 +1,4 @@
-<div id="state" data-zone="ZONE-A" data-m2="50" data-percentage="30">
-
+<div id="state" data-zone="ZONE A" data-m2="0" data-percentage="30">
   <div class="container simu">
     <div class="text-center mt-5">
         <h2>SIMULATION</h2>
@@ -33,9 +32,9 @@
             <div class="card-body">
               <h5 class="card-title">2 - Indiquez la surface en m² de votre logement</h5>
                 <div class="slidecontainer">
-                  <input type="range" min="15" max="150" value="50" class="slider" id="myRange">
+                 <div id="demo" class="text-center" style="font-weight: bold;"></div>
+                  <input type="range" min="15" max="150" value="0" class="slider" id="myRange" name="slider">
                 </div>
-                 <div id="demo"></div>
             </div>
 
             <div class="card-body">
@@ -70,25 +69,15 @@
              <div class="card-body d-flex justify-content-around">
               <div class="text-center d-flex flex-column">
                 <h5>Montant minimum du loyer</h5>
-               <div id="min-rent" class="d-flex align-items-center"><strong>735 €</strong></div>
+               <div class="min-rent" class="d-flex align-items-center"><strong id="min"></strong></div>
              </div>
 
              <div class="text-center">
                 <h5>Montant minimum du loyer</h5>
-               <div id="max-rent"><strong>833 €</strong></div>
+               <div class="max-rent"><strong id="max"></strong></div>
              </div>
-
           </div>
-
-
-
-
-
-
         </div>
-
-
-
       </div>
   </div>
   </div>

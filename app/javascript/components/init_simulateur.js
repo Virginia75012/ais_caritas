@@ -31,6 +31,7 @@ const initSimulateur = () => {
   })
 
   const setZone = (event) => {
+    console.log(event.currentTarget.innerText)
     document.querySelector('#state').dataset.zone = event.currentTarget.innerText
   }
 
@@ -39,7 +40,7 @@ const initSimulateur = () => {
   }
 
   const simulation = () => {
-    const state = document.querySelector('#state')
+    const state = document.querySelector('#state');
 
     document.querySelector('#myRange').oninput = function() {
       state.dataset.m2 = this.value;
@@ -53,17 +54,33 @@ const initSimulateur = () => {
       perc.addEventListener('click', setPerc)
     })
 
-
-    console.log(state.dataset.zone)
-    console.log(state.dataset.m2)
-    console.log(state.dataset.percentage)
+    const minRent = document.getElementById('min');
+    const maxRent = document.getElementById('max');
+    document.getElementById("demo").innerHTML = state.dataset.m2 + "m²";
 
     if (state.dataset.zone === 'ZONE A' && state.dataset.percentage === '30') {
+      minRent.innerHTML = 17 * state.dataset.m2;
+      maxRent.innerHTML = 19 * state.dataset.m2;
 
-    } else if (zone.innerText === 'ZONE A' && percentage.innerText === '70') {
+    } else if (state.dataset.zone === 'ZONE A' && state.dataset.percentage === '70') {
+      minRent.innerHTML = 13 * state.dataset.m2;
+      maxRent.innerHTML = 15 * state.dataset.m2;
 
-    } else if (zone.innerText === 'ZONE A' && percentage.innerText === '85') {
+    } else if (state.dataset.zone === 'ZONE A' && state.dataset.percentage === '85') {
+      minRent.innerHTML = 10 * state.dataset.m2;
+      maxRent.innerHTML = 12 * state.dataset.m2;
 
+    } else if (state.dataset.zone === 'ZONE Abis' && state.dataset.percentage === '30') {
+      minRent.innerHTML = 18 * state.dataset.m2;
+      maxRent.innerHTML = 20 * state.dataset.m2;
+
+    } else if (state.dataset.zone === 'ZONE Abis' && state.dataset.percentage === '70'){
+      minRent.innerHTML = 17 * state.dataset.m2;
+      maxRent.innerHTML = 19 * state.dataset.m2;
+
+    } else if (state.dataset.zone === 'ZONE Abis' && state.dataset.percentage === '85'){
+      minRent.innerHTML = 15 * state.dataset.m2;
+      maxRent.innerHTML = 17 * state.dataset.m2;
     }
   }
 
@@ -72,6 +89,8 @@ const initSimulateur = () => {
   items.forEach((item) => {
     item.addEventListener('click', simulation)
   })
+
+  simulation();
 
 }
 
