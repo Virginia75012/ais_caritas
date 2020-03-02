@@ -27,6 +27,7 @@ h3 {
   background-image: image-url("about.jpg");
   background-size: cover;
   background-position: center;
+  z-index: -1;
 }
 
 .container-card {
