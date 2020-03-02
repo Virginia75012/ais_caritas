@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'owner', to: 'pages#owner'
   get 'about', to: 'pages#about'
   get 'missions', to: 'pages#missions'
+  get 'dashboard', to: 'pages#dashboard'
   resources :flats, only: [:new, :create, :edit, :destroy, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :flats
