@@ -12,4 +12,5 @@ const slide = () => {
   }
 }
 
+
 export { slide }
