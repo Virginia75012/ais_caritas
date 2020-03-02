@@ -1,0 +1,10 @@
+@import 'slick';
+@import 'slick-theme';
+
+.slick-arrow::before {
+  color: $orange;
+}
+
+.slick-slider {
+  margin-top: 130px !important;
+}

@@ -33,6 +33,27 @@
   font-family: $body-font;
 }
 
+.card-product-infos{
+  text-align: center;
+  color: $orange;
+  font-family: $body-font;
+}
+
+.card-product img {
+  margin: auto;
+  border-radius: 10px
+}
+
+.card-product-infos h4 {
+  color: $blue;
+  font-weight: 700;
+  font-size: 1.34em;
+  letter-spacing: 2px;
+  font-family: $headers-font;
+  text-align: center;
+  padding-top: 20px;
+}
+
 .card .contentBx a {
   display: inline-block;
   padding: 10px 20px;

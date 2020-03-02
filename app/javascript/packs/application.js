@@ -29,6 +29,7 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 import { slide } from '../components/slider';
 import { trash } from '../components/trash';
 import { initSimulateur } from '../components/init_simulateur';
+import { initSlick } from '../custom/carousel';
 
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
@@ -36,6 +37,7 @@ document.addEventListener('turbolinks:load', () => {
   initSweetalert();
   slide();
   trash();
+  initSlick();
   if(document.querySelector('.simu')){
     initSimulateur();
   }
