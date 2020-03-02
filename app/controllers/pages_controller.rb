@@ -14,6 +14,13 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @flats = Flat.all.geocoded
     authorize current_user
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 end
