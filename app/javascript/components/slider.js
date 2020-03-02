@@ -15,4 +15,5 @@ const slide = () => {
   }
 }
 
-export { slide }
+
+export { slide };

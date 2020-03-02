@@ -28,7 +28,7 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initSweetalert } from '../plugins/init_sweetalert';
 import { slide } from '../components/slider';
 import { trash } from '../components/trash';
-
+import { initSimulateur } from '../components/init_simulateur';
 
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
@@ -36,5 +36,11 @@ document.addEventListener('turbolinks:load', () => {
   initSweetalert();
   slide();
   trash();
+  if(document.querySelector('.simu')){
+    initSimulateur();
+  }
+
 });
+
+
 
