@@ -50,6 +50,7 @@ $contrast: darken($main, 10%);
 
 .drawer-list {
   position: fixed;
+  z-index: 1;
   right: 0;
   top: 0;
   height: 100vh;
@@ -64,7 +65,7 @@ $contrast: darken($main, 10%);
   border-bottom-left-radius: 100vw;
   @include alpha-attribute('background-color', rgba($contrast, 0.8), white);
   @media (min-width: 768px) {
-    width: 18vw;
+    width: 28vw;
   }
   ul {
     height: 100%;

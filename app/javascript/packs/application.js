@@ -30,12 +30,14 @@ import { slide } from '../components/slider';
 import { trash } from '../components/trash';
 import { initSimulateur } from '../components/init_simulateur';
 import { initSlick } from '../custom/carousel';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initAutocomplete();
   initSweetalert();
   slide();
+  initMapbox();
   trash();
   initSlick();
   if(document.querySelector('.simu')){

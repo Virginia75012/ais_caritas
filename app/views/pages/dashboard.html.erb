@@ -1,1 +1,33 @@
-<h1>Dashboard</h1>
+<div class="container flats">
+  <div class="text-center mt-5">
+      <h2>TABLEAU DE BORD</h2>
+      <hr>
+    </div>
+  <div class="row">
+    <div id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    <% @flats.each do |flat| %>
+      <div class="col-xs-4 mt-5 flats">
+        <div class="card-flat">
+          <% flat.photos.each do |photo| %>
+          <%= cl_image_tag photo.key %>
+          <% end %>
+        <div class="card-flat-infos">
+          <h2><%= flat.title %></h2>
+          <p><%= flat.address %></p>
+          <p><%= flat.area %>m²</p>
+          <p><%= flat.typology %></p>
+        </div>
+        <div class="container icons">
+            <button id="sweet-alert-trash<%=flat.id%>" class="btn btn-flat our-button alt"><i class="far fa-trash-alt"></i></button>
+            <%= link_to flat_path(flat), method: :delete, id: "delete-link",class: 'hidden' do %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

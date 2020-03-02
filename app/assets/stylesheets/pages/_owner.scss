@@ -2,7 +2,6 @@
   color: $blue;
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .owner-image {
@@ -23,6 +22,10 @@
   height: 520px;
 }
 
+#image-owner {
+ border: 1px solid white;
+
+}
 
 #avantages {
   border: 1px solid white;
@@ -49,6 +52,4 @@
   position: absolute;
   bottom: 80px;
   right: 50%;
-
 }
-
