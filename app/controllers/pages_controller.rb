@@ -12,4 +12,8 @@ class PagesController < ApplicationController
 
   def missions
   end
+
+  def dashboard
+    authorize current_user
+  end
 end
