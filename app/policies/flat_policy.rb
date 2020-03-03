@@ -12,7 +12,7 @@ class FlatPolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == user
+    record.user == user || user.admin
   end
 
   class Scope < Scope
