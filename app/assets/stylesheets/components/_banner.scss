@@ -62,6 +62,17 @@
   background-size: cover;
   background-position: center;
 }
+
+.banner-label {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  background-image: image-url("label.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
 /** MEDIA QUERIES **/
 @media (max-width: 640px) {
   .banner-content h1 {
