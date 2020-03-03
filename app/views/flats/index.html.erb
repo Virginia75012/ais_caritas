@@ -29,11 +29,11 @@
           <p><%= flat.typology %></p>
         </div>
         <div class="container icons">
-            <button id="sweet-alert-trash<%=flat.id%>" class="btn btn-flat our-button alt"><i class="far fa-trash-alt"></i></button>
-            <%= link_to flat_path(flat), method: :delete, id: "delete-link",class: 'hidden' do %>
+            <label for="box2" id="sweet-alert-trash-<%=flat.id%>" class="btn btn-flat our-button alt"><i class="far fa-trash-alt"></i></label>
+            <%= link_to flat_path(flat), method: :delete, id: "delete-link-#{flat.id}" do %>
             <% end %>
 
-            <%= link_to edit_flat_path(flat), class: 'btn btn-flat our-button' do %>
+            <%= link_to edit_flat_path(flat), class: 'btn btn-flat our-button mb-2' do %>
               <i class="far fa-edit"></i>
             <% end %>
         </div>
