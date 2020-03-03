@@ -16,21 +16,21 @@
           <%= cl_image_tag photo.key %>
           <% end %>
         <div class="card-flat-infos">
-          <h2><%= flat.title %></h2>
-          <p><%= flat.address %></p>
+          <h2><%= flat.title.capitalize %></h2>
+          <p><%= flat.address.capitalize %></p>
           <p><%= flat.area %>m²</p>
           <p><%= flat.typology %></p>
         </div>
         <div class="container icons">
           <% if flat.status == true %>
-            ✅
+            <div class="status">✅</div>
           <% else %>
             <%= link_to validate_flat_path(flat), method: :patch, id: "validate-link-#{flat.id}" do %>
-              A valider
+              <div class="valider">A valider</div>
             <% end %>
           <% end %>
 
-            <label for="box2" id="sweet-alert-trash-<%=flat.id%>">❌</label>
+            <label for="box2" class="validation" id="sweet-alert-trash-<%=flat.id%>">❌</label>
             <%= link_to flat_path(flat), method: :delete, id: "delete-link-#{flat.id}" do %>
             <% end %>
 <!--             <input id="box1" type="checkbox" />
