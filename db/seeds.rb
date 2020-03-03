@@ -20,10 +20,14 @@ benjamin = User.create!(first_name: "benjamin", last_name: "dupont", email: "pdp
 xavier = User.create!(first_name: "xavier", last_name: "tl", email: "xavier@tl.com", password: "123456")
 
 puts "creating gp..."
-beau = Flat.create!(user: pamela, typology: "t2", area: "30", title:"Joli appartement", address: "3 rue roger Salengro creteil", rent: 300, rental_charges: 26, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
-moche = Flat.create!(user: pamela, typology: "t3", area: "37", title:"Bel emplacement", address: "13 avenue daumesnil paris", rent: 400, rental_charges: 260, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
-normal = Flat.create!(user: pamela, typology: "t4", area: "70", title:"Idéal famille", address: "94 rue du faubourg saint-antoine paris", rent: 1000, rental_charges: 400, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre", status: true)
-waou = Flat.create!(user: pamela, typology: "t2", area: "32", title:"Bien agencé", address: "18 boulevard soult paris", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+beau = Flat.create!(user: pamela, typology: "t2", area: "30", title:"Joli appartement", address: "3 rue Roger Salengro, CRETEIL", rent: 300, rental_charges: 26, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+moche = Flat.create!(user: pamela, typology: "t3", area: "37", title:"Bel emplacement", address: "13 avenue Daumesnil, PARIS", rent: 400, rental_charges: 260, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+normal = Flat.create!(user: pamela, typology: "t4", area: "70", title:"Idéal famille", address: "94 rue du Faubourg Saint-Antoine, PARIS", rent: 1000, rental_charges: 400, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre", status: true)
+waou = Flat.create!(user: pamela, typology: "t2", area: "32", title:"Bien agencé", address: "18 boulevard Soult, PARIS", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+flat = Flat.create!(user: ashley, typology: "t3", area: "45", title:"Belle vue", address: "9 rue de Valmy, MONTREUIL", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+vir = Flat.create!(user: ashley, typology: "t4", area: "89", title:"Grand espace à vivre", address: "34 allée Vivaldi, PARIS", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+pap = Flat.create!(user: ashley, typology: "t2", area: "21", title:"Décoration oriental", address: "71 rue Dulong, PARIS", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+mam = Flat.create!(user: xavier, typology: "t4", area: "76", title:"Proche du métro", address: "25 rue du Cygne, SAINT-DENIS ", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 
 
 
@@ -62,5 +66,28 @@ normal.save
 file = URI.open("https://q-xx.bstatic.com/xdata/images/hotel/840x460/118594458.jpg?k=b97e932dc729bb39042dde4458c764a91e2c6aa1cbe631aa5e424b1fa0347f6f&o=")
 waou.photos.attach(io: file, filename: "waou_photo")
 waou.save
+
+
+file = URI.open("https://www.18h39.fr/wp-content/uploads/2019/12/appartement-lumineux-bo-bon-600x420.jpg")
+flat.photos.attach(io: file, filename: "flat_photo")
+flat.save
+
+file = URI.open("https://img.netty.immo/productcw/aimmobilier2/6/VA2388/appartement-t3-toulouse-vente-1560871299-VA2388_4_l.jpg")
+vir.photos.attach(io: file, filename: "vir_photo")
+vir.save
+
+
+file = URI.open("https://lh3.googleusercontent.com/proxy/lsUDIAc7q75d4jZ3ikPDbfdjRDBAi4hcmkCGa1ZWq_AU4S_Sk5if62n6zUk-2H7O5OqeUO9Wst4yC2QKJi_mNi3qNJnwrthzqken9upQ-ntGfqY")
+pap.photos.attach(io: file, filename: "pap_photo")
+pap.save
+
+
+file = URI.open("https://medias.squarehabitat.fr/photos/medium/843-008FB90098154AFD8A14329A534ABEC4_1.jpg")
+mam.photos.attach(io: file, filename: "mam_photo")
+mam.save
+
+
+
+
 
 
