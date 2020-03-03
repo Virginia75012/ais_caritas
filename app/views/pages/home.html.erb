@@ -12,8 +12,15 @@
 <div class="container homepage">
   <div class="row">
     <div class="col">
-      <h2 class=title-home>L’Agence Immobilière Sociale CARITAS a pour vocation d’éveiller un engagement solidaire auprès des propriétaires sensibles aux problématiques de mal-logement. <br/>
+      <h2 class=title-home>L’<strong>Agence Immobilière Sociale CARITAS</strong> a pour vocation d’éveiller un engagement solidaire auprès des propriétaires sensibles aux problématiques de mal-logement. <br/>
       </h2>
+      <h3 class=title-home style="font-size: 18px; line-height: 1.4;">L’intermédiation locative repose sur des déductions fiscales, pouvant atteindre <strong>jusqu’à 85 % des revenus locatifs</strong>, pour les propriétaires privés qui acceptent de louer leur logement à un loyer maîtrisé pour des ménages en difficulté.<br/>
+        <em>Vous avez la possibilité d'effectuer une estimation de votre rendement locatif.</em></h3>
+      <div class="row d-flex justify-content-center mt-3 mb-5">
+      <div class="buttons">
+        <%= link_to "Simulation", new_simulation_path, class: "btn our-button"  %>
+      </div>
+    </div>
     </div>
   </div>
 
@@ -25,7 +32,7 @@
         </div>
         <div class="contentBx text-center mt-3">
           <h3>Gestion locative de proximité</h3>
-            <p>Contribuer à faire une démarche utile et solidaire</p>
+            <p>Contribuer à faire une démarche utile et solidaire en louant votre bien à des spécialistes de l'immobilier</p>
             <%= link_to "En Savoir plus", owner_path, class: "nav-link" %>
         </div>
       </div>
@@ -38,7 +45,7 @@
         </div>
         <div class="contentBx text-center mt-3">
           <h3>Devenez Propriétaire Solidaire</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Une gestion locative adaptée qui a pour but de sécuriser la relation locative entre un propriétaire et son locataire</p>
             <%= link_to "En Savoir plus", missions_path, class: "nav-link" %>
         </div>
       </div>
@@ -51,53 +58,53 @@
         </div>
         <div class="contentBx text-center mt-3">
           <h3>Accompagnement des ménages</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Suivi social, soutien aux démarches administratives, accompagnement sur le budget domestique</p>
             <a href="#"><span>En Savoir plus</span></a>
         </div>
       </div>
     </div>
   </div>
-  <div class="variable-width mt-5 carousel">
+  <div class="variable-width mt-5 carousel" style="margin-bottom: 8%;">
     <div class="card-product">
       <%= image_tag "carousel_1.jpg", size: "180x170", crop: "fill" %>
       <div class="card-product-infos">
-        <h4>Témoignage Bénévole</h4>
-        <p>J'accompagne une famille dans la vie par le logement</p>
+        <h4>Chloé, <em class="testimonial">Bénévole</em></h4>
+        <p>Je m'invetis depuis 1 an auprès d'une famille logée à Paris</p>
       </div>
     </div>
     <div class="card-product">
-      <%= image_tag "caroussel2.jpg", size: "180x170", crop: "fill" %>
+      <%= image_tag "carousel6.jpg", size: "180x170", crop: "fill" %>
       <div class="card-product-infos">
-        <h4>Témoignage Locataire</h4>
-        <p>J'accompagne une famille dans la vie par le logement</p>
+        <h4>Famille Martin, <em class="testimonial">Locataire</em></h4>
+        <p>Nous sommes enfin heureux et soulagés d'avoir un logement décent</p>
       </div>
     </div>
     <div class="card-product">
       <%= image_tag "caroussel3.jpg", size: "180x170", crop: "fill" %>
       <div class="card-product-infos">
-        <h4>Témoignage Propriétaire</h4>
+        <h4>Jean-Jacques, <em class="testimonial">Propriétaire</em></h4>
+        <p>Fiable et de confiance, je ne regrette pas ma démarche de propriétaire solidaire</p>
+      </div>
+    </div>
+    <div class="card-product">
+      <%= image_tag "carousel5.jpg", size: "180x170", crop: "fill" %>
+      <div class="card-product-infos">
+        <h4>Marc, <em class="testimonial">Bénévole</em></h4>
         <p>J'accompagne une famille dans la vie par le logement</p>
       </div>
     </div>
     <div class="card-product">
-      <%= image_tag "caroussel2.jpg", size: "180x170", crop: "fill" %>
+      <%= image_tag "carousel4.jpg", size: "180x170", crop: "fill" %>
       <div class="card-product-infos">
-        <h4>Témoignage Propriétaire</h4>
-        <p>J'accompagne une famille dans la vie par le logement</p>
+        <h4>Sophie, <em class="testimonial">Propriétaire</em></h4>
+        <p>Je n'ai pas hésité un instant et me suis tout de suite engagée à louer mon T2</p>
       </div>
     </div>
     <div class="card-product">
-      <%= image_tag "caroussel3.jpg", size: "180x170", crop: "fill" %>
+      <%= image_tag "caroussel2", size: "180x170", crop: "fill" %>
       <div class="card-product-infos">
-        <h4>Témoignage Bénévole</h4>
-        <p>J'accompagne une famille dans la vie par le logement</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <%= image_tag "carousel_1.jpg", size: "180x170", crop: "fill" %>
-      <div class="card-product-infos">
-        <h4>Témoignage Bénévole</h4>
-        <p>J'accompagne une famille dans la vie par le logement</p>
+        <h4>Mireille, <em class="testimonial">Locataire</em></h4>
+        <p>Je me sens enfin soutenue dans mes démarches</p>
       </div>
     </div>
   </div>

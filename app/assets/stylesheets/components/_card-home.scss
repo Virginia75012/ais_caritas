@@ -1,9 +1,10 @@
 .card-group {
-  margin-top: 6%;
+  margin-top: 1%;
 }
 
 .card {
   width: 330px;
+  height: 96%;
   margin: 20px;
   padding: 40px 30px;
   box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
@@ -47,11 +48,19 @@
 .card-product-infos h4 {
   color: $blue;
   font-weight: 700;
-  font-size: 1.34em;
+  font-size: 1.2em;
   letter-spacing: 2px;
   font-family: $headers-font;
   text-align: center;
   padding-top: 20px;
+}
+
+.card-product-infos p {
+  font-size: 14px;
+}
+
+em.testimonial {
+  font-size: 14px;
 }
 
 .card .contentBx a {
