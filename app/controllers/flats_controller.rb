@@ -39,13 +39,21 @@ class FlatsController < ApplicationController
   def destroy
     @flat = Flat.find(params[:id])
     @flat.destroy
-
     authorize @flat
+
     if current_user.admin
       redirect_to dashboard_path
     else
       redirect_to flats_path
     end
+  end
+
+  def validate
+    @flat = Flat.find(params[:id])
+    authorize @flat
+
+    @flat.update(status: true)
+    redirect_to dashboard_path
   end
 
   private

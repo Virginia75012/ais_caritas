@@ -15,6 +15,10 @@ class FlatPolicy < ApplicationPolicy
     record.user == user || user.admin
   end
 
+  def validate?
+    user.admin
+  end
+
   class Scope < Scope
     def resolve
       if user.admin
