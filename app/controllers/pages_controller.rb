@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :owner, :about, :missions ]
+  skip_before_action :authenticate_user!, only: [ :home, :owner, :about, :missions, :label ]
 
   def home
   end
@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   end
 
   def missions
+  end
+
+  def label
   end
 
   def dashboard
