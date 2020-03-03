@@ -40,7 +40,8 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   trash();
   initSlick();
-  if(document.querySelector('.simu')){
+
+  if (document.querySelector('.simu')) {
     initSimulateur();
   }
 
