@@ -1,0 +1,38 @@
+.status img {
+  width: 30px;
+}
+
+.status {
+  position: relative;
+  bottom: 40px;
+  left: 86px;
+}
+
+.validation {
+  left: 87px;
+  position: relative;
+}
+
+.validation:hover {
+  cursor: pointer;
+}
+
+.valider:hover {
+  color: green !important;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.valider {
+  position: relative;
+  top: 23px;
+}
+
+.img-dashboard img {
+  width:50px;
+}
+
+aside {
+  border: 1px solid black;
+}
