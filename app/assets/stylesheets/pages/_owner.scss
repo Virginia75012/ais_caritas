@@ -2,52 +2,48 @@
   color: $blue;
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
-
-.owner-image {
-  width: 647px;
-  height: 520px;
-}
-
-.content-container {
-  border: 1px solid white;
-  position: relative;
-  height: 1250px;
+.quote-card {
+  background: #fff;
+  padding: 20px;
+  padding-left: 50px;
   margin-top: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(34, 34, 34, 0.12);
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
 }
-
-.content {
+.quote-card:before {
+  content: "";
   position: absolute;
-  width: 647px;
-  height: 520px;
+  top: 10px;
+  left: 10px;
+  font-size: 5em;
+  color: rgba(238, 238, 238, 0.8);
+  font-weight: normal;
 }
 
-#image-owner {
- border: 1px solid white;
-
+.quote-card:after {
+  font-family: Georgia, serif;
+  content: "";
+  position: absolute;
+  bottom: -110px;
+  line-height: 100px;
+  right: -32px;
+  font-size: 25em;
+  color: rgba(238, 238, 238, 0.8);
+  font-weight: normal;
 }
-
-#avantages {
-  border: 1px solid white;
-  right: 1px;
-  bottom: 648px;
-  border-radius: 3px;
-  z-index: 2;
-  background-color: white;
-  box-shadow: 3px 4px 5px 3px #868282;
-  padding: 25px;
+.card.owner {
+  width: 500px;
+  height: 170px;
 }
-
-#fiscality{
- border: 1px solid white;
- bottom: 196px;
- border-radius: 3px;
- z-index: 3;
- background-color: white;
- box-shadow: 3px 4px 5px 3px #868282;
- padding: 15px;
+.contentBx img {
+  width: 50px;
+  margin-bottom: 24px;
 }
-
 .btn-owner {
   position: absolute;
   bottom: 80px;
