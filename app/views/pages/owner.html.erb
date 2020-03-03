@@ -8,36 +8,103 @@
       </div>
     </div>
   </div>
-
   <div class="banner-owner text-center"></div>
-
-  <div class="content-container">
-
-    <div class="content" id="avantages">
-       <h3><strong>Vos avantages :</strong></h3>
-        <li>Sécurisation des risques locatifs (Impayés de loyer, dégradations, Vacance locative)</li>
-        <li> Bénéficier jusqu’à 85% d’abattement sur vos revenus fonciers, de prime à la mise en location ainsi que d’aides pour la rénovation de votre bien</li>
-        <li> Cautionnement VISALE</li>
-        <h3><strong>Louer son bien via notre agence :</strong></h3>
-        <li> Contribuer à faire une démarche utile et solidaire</li>
-        <li> Permettre à des personnes aux revenus modestes d’être logées tout en étant accompagnées</li>
-        <li> Aider le locataire à construire un projet d’insertion durable</li>
+  <div class="container">
+    <div class="row">
+      <div class="col title-owner">
+        <h3>Vous êtes propriétaire et souhaitez-vous engager dans un projet solidaire ?</h3>
+      </div>
     </div>
-
-    <div class="content" id="fiscality">
-      <h3><strong>Fiscalité</strong></h3>
-      <li>Soutenir le locataire dans la gestion budgétaire et administrative</li>
-      <li>Assurer une bonne relation avec le voisinage et veiller au bien-vivre dans son logement</li>
-      <li>Le bénévole accompagnant a pour but l’autonomie du ménage dans les droits et obligations d’occupation du logement. Il vise à favoriser une occupation sereine de l’appartement et une insertion harmonieuse dans le quartier environnant :</li>
-      <li>Être présent lors de la visite de l’appartement</li>
-      <li>Être au côté de la famille dans son installation</li>
+    <div class="row">
+      <div class="col text-center">
+        <p>L'<strong>Agence Immobilière Sociale Caritas</strong> vous aide à formaliser votre besoin et vous conseille sur les différents cadres locatifs à votre disposition. <br/>
+        Elle s'engage à vos côtés, pour vous apporter des réponses adaptées  à vos attentes et à votre projet, tout en s'inscrivant dans une démarche sociale et solidaire. <br/>
+        Vous aurez la possibilité en fin de page d'effectuer une <strong><a href="/simulations/new" class="text-decoration-none">simulation</strong></a> sur votre potentiel rendement locatif et proposer votre logement à l'Agence.</p>
+      </div>
     </div>
-
-
-    <div class="btn-owner">
-      <!-- Button trigger modal -->
-       <%= link_to 'Simulation', new_simulation_path, class: 'btn our-button' %>
-      <%= link_to 'Proposer', new_flat_path(@flat), class: 'btn our-button' %>
+    <div class="row">
+      <blockquote class="quote-card text-center">
+        <p>La location avec conventionnement de l'<strong>ANAH</strong> comporte de multiples avantages aux bénéfices des propriétaires tels que des primes, des aides aux travaux, ainsi qu'un dégrèvement fiscal du revenu locatif pouvant aller <strong>jusqu'à 85%</strong>.</p>
+      </blockquote>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <h3 class="title-owner">Nos services</h3>
+        <p>Une gestion de votre logement assurée par des professionnels de l'immobilier.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="card owner">
+          <div class="contentBx d-flex justify-content-center">
+            <img src="https://image.flaticon.com/icons/svg/1632/1632670.svg" alt="">
+            <div class="text ml-4 text-align">
+              <p>Conseils auprès des propriétaires sur les différents cadres locatifs à leur disposition</p>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-xs-6">
+        <div class="card owner">
+          <div class="contentBx d-flex justify-content-center">
+            <img src="https://image.flaticon.com/icons/svg/1632/1632670.svg" alt="">
+            <div class="text ml-4 text-align">
+              <p>Sécurisation des risques locatifs : impayés de loyer, dégradations, vacance locative</p>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-xs-6">
+        <div class="card owner">
+          <div class="contentBx d-flex justify-content-center">
+            <img src="https://image.flaticon.com/icons/svg/1632/1632670.svg" alt="">
+            <div class="text ml-4 text-align">
+              <p>Recherche de locataire parmi les ménages identifiés et étude approfondie des candidatures</p>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-xs-6">
+        <div class="card owner">
+          <div class="contentBx d-flex justify-content-center">
+            <img src="https://image.flaticon.com/icons/svg/1632/1632670.svg" alt="">
+            <div class="text ml-4 text-align">
+              <p>En cas d'un conventionnement avec l'ANAH : conception du dossier de conventionnement et suivi de celui-ci auprès des organismes référents</p>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-xs-6">
+        <div class="card owner">
+          <div class="contentBx d-flex justify-content-center">
+            <img src="https://image.flaticon.com/icons/svg/1632/1632670.svg" alt="">
+            <div class="text ml-4 text-align">
+              <p>Visite technique trimestrielle des logements. En cas de travaux, une demande de devis et suivi de chantier est réalisé, grâce au réseau de professionnels agrées</p>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-xs-6">
+        <div class="card owner">
+          <div class="contentBx d-flex justify-content-center">
+            <img src="https://image.flaticon.com/icons/svg/1632/1632670.svg" alt="">
+            <div class="text ml-4 text-align">
+              <p>Rédaction des actes et réalisation des états des lieux. Encaissement des loyer et révision de ceux-ci quand il convient, régularisation des charges locatives</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col title-owner">
+        <h3 style="font-size: 18px;">Vous pourrez retouver plus de détails de nos services en prenant également contact avec nous.</h3>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center mb-5">
+      <div class="buttons">
+        <%= link_to "Simulation", new_simulation_path, class: "btn our-button"  %>
+        <%= link_to "Proposer", new_flat_path, class: "btn our-button"  %>
+      </div>
     </div>
   </div>
 </div>
