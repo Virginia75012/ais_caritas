@@ -12,12 +12,102 @@
   </div>
 
   <div class="row">
-    <div class="row">
-      <div class="col">
-      </div>
-    </div>
-    <% @flats.each do |flat| %>
-      <div class="col-xs-4 mt-5 flats">
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Nombre de logements</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.count %></div>
+     </div>
+   </div>
+
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Logements à valider</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:status => false).count %></div>
+     </div>
+   </div>
+
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Logements Libres</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:current_state => "libre").count %></div>
+     </div>
+   </div>
+
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Logements Occupés</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:current_state => "occupe").count %></div>
+     </div>
+   </div>
+ </div>
+
+<div class="row">
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">STUDIO</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "studio").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T1</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t1").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T2</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t2").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T3</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t3").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T4</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t4").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T5</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t5").count %></div>
+     </div>
+   </div>
+  </div>
+  <hr class="mt-5">
+
+  <div class="text-center">
+    <h3>LES PROPOSITIONS</h3>
+  </div>
+
+  <div class="row">
+    <% @flats.reverse_each do |flat| %>
+      <div class="col-xs-4 mt-2 mb-3 flats">
         <div class="card-flat">
           <% flat.photos.each do |photo| %>
           <%= cl_image_tag photo.key %>
@@ -44,7 +134,5 @@
       </div>
     </div>
     <% end %>
-
-
   </div>
 </div>
