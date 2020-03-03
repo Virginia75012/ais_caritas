@@ -22,6 +22,14 @@
           <p><%= flat.typology %></p>
         </div>
         <div class="container icons">
+          <% if flat.status == true %>
+            ✅
+          <% else %>
+            <%= link_to validate_flat_path(flat), method: :patch, id: "validate-link-#{flat.id}" do %>
+              A valider
+            <% end %>
+          <% end %>
+
             <label for="box2" id="sweet-alert-trash-<%=flat.id%>">❌</label>
             <%= link_to flat_path(flat), method: :delete, id: "delete-link-#{flat.id}" do %>
             <% end %>
