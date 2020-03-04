@@ -14,7 +14,7 @@ class FlatsController < ApplicationController
     authorize @flat
 
     if @flat.save
-      redirect_to flats_path
+      redirect_to flats_path, success: "Votre annonce a bien été créé"
     else
       render :new
     end
@@ -30,7 +30,7 @@ class FlatsController < ApplicationController
     @flat.update(flat_params)
     authorize @flat
     if @flat.save
-      redirect_to flats_path
+      redirect_to flats_path, success: "L'annonce a bien été mise à jour"
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class FlatsController < ApplicationController
     authorize @flat
 
     if current_user.admin
-      redirect_to dashboard_path
+      redirect_to dashboard_path, danger: "Annonce bien supprimée"
     else
       redirect_to flats_path
     end
@@ -53,7 +53,7 @@ class FlatsController < ApplicationController
     authorize @flat
 
     @flat.update(status: true)
-    redirect_to dashboard_path
+    redirect_to dashboard_path, success: "Logement validé"
   end
 
   private

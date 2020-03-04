@@ -15,6 +15,15 @@
     </div>
   </div>
 
+  <% flash.each do |name, msg| %>
+  <div class="alert alert-success" role="alert">
+  <%= msg %>
+  <button type="button" class="close pl-2" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+  <% end %>
+
   <div class="row">
     <% @flats.each do |flat| %>
       <div class="col-xs-4 mt-5 flats">
