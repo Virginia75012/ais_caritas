@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'missions', to: 'pages#missions'
   get 'dashboard', to: 'pages#dashboard'
+  get 'label', to: 'pages#label'
 
   resources :flats do
     member do
