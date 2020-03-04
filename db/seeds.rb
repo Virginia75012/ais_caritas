@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
+# require "open-uri"
 
 puts 'Destroying users and flats...'
 Flat.destroy_all
@@ -26,65 +26,65 @@ normal = Flat.create!(user: pamela, typology: "t4", area: "70", title:"Idéal fa
 waou = Flat.create!(user: pamela, typology: "t2", area: "32", title:"Bien agencé", address: "18 boulevard Soult, PARIS", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 flat = Flat.create!(user: ashley, typology: "t3", area: "45", title:"Belle vue", address: "9 rue de Valmy, MONTREUIL", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 vir = Flat.create!(user: ashley, typology: "t4", area: "89", title:"Grand espace à vivre", address: "34 allée Vivaldi, PARIS", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
-pap = Flat.create!(user: ashley, typology: "t2", area: "21", title:"Décoration oriental", address: "71 rue Dulong, PARIS", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
+pap = Flat.create!(user: ashley, typology: "t2", area: "21", title:"Décoration orientale", address: "71 rue Dulong, PARIS", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 mam = Flat.create!(user: xavier, typology: "t4", area: "76", title:"Proche du métro", address: "25 rue du Cygne, SAINT-DENIS ", rent: 700, rental_charges: 269, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 
-
+puts "done"
 
 file = URI.open("https://avatars3.githubusercontent.com/u/57186441?v=4")
 pamela.avatar.attach(io: file, filename: "pamela_avatar")
-pamela.save
+pamela.save!
 
 file = URI.open("https://avatars3.githubusercontent.com/u/29464477?v=4")
 virginia.avatar.attach(io: file, filename: "virginia_avatar")
-virginia.save
+virginia.save!
 
 file = URI.open("https://avatars1.githubusercontent.com/u/55446352?v=4")
 ashley.avatar.attach(io: file, filename: "ashley_avatar")
-ashley.save
+ashley.save!
 
 file = URI.open("https://avatars1.githubusercontent.com/u/54189912?v=4")
 benjamin.avatar.attach(io: file, filename: "benjamin_avatar")
-benjamin.save
+benjamin.save!
 
 file = URI.open("https://avatars3.githubusercontent.com/u/54706761?v=4")
 xavier.avatar.attach(io: file, filename: "xavier_avatar")
-xavier.save
+xavier.save!
 
 file = URI.open("https://www.vanupied.com/wp-content/uploads/68550354.jpg")
 beau.photos.attach(io: file, filename: "beau_photo")
-beau.save
+beau.save!
 
 file = URI.open("https://www.realites.com/uploads/media/operation/0001/20/thumb_19457_operation_349x249.jpeg")
 moche.photos.attach(io: file, filename: "moche_photo")
-moche.save
+moche.save!
 
 file = URI.open("https://img.netty.immo/productw/pietrapolis/20/VA28296/appartement-t1-lyon-vente-1564693658-VA28296_2_l.jpg")
 normal.photos.attach(io: file, filename: "normal_photo")
-normal.save
+normal.save!
 
 file = URI.open("https://q-xx.bstatic.com/xdata/images/hotel/840x460/118594458.jpg?k=b97e932dc729bb39042dde4458c764a91e2c6aa1cbe631aa5e424b1fa0347f6f&o=")
 waou.photos.attach(io: file, filename: "waou_photo")
-waou.save
+waou.save!
 
 
 file = URI.open("https://www.18h39.fr/wp-content/uploads/2019/12/appartement-lumineux-bo-bon-600x420.jpg")
 flat.photos.attach(io: file, filename: "flat_photo")
-flat.save
+flat.save!
 
 file = URI.open("https://img.netty.immo/productcw/aimmobilier2/6/VA2388/appartement-t3-toulouse-vente-1560871299-VA2388_4_l.jpg")
 vir.photos.attach(io: file, filename: "vir_photo")
-vir.save
+vir.save!
 
 
-file = URI.open("https://lh3.googleusercontent.com/proxy/lsUDIAc7q75d4jZ3ikPDbfdjRDBAi4hcmkCGa1ZWq_AU4S_Sk5if62n6zUk-2H7O5OqeUO9Wst4yC2QKJi_mNi3qNJnwrthzqken9upQ-ntGfqY")
+file = URI.open("https://deavita.fr/wp-content/uploads/2017/01/d%C3%A9cor-oriental-espace-outdoor-table-bois-tapis-kilim.jpg")
 pap.photos.attach(io: file, filename: "pap_photo")
-pap.save
+pap.save!
 
 
 file = URI.open("https://medias.squarehabitat.fr/photos/medium/843-008FB90098154AFD8A14329A534ABEC4_1.jpg")
 mam.photos.attach(io: file, filename: "mam_photo")
-mam.save
+mam.save!
 
 
 
