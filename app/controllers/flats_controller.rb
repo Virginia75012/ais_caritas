@@ -47,6 +47,10 @@ class FlatsController < ApplicationController
       redirect_to flats_path
     end
   end
+   def show
+    @flat = Flat.find(params[:id])
+    authorize current_user
+  end
 
   def validate
     @flat = Flat.find(params[:id])

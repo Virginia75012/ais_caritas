@@ -2,6 +2,9 @@ class FlatPolicy < ApplicationPolicy
   def index?
     record.user == user
   end
+   def show?
+    user.admin? == true
+  end
 
   def create?
     true

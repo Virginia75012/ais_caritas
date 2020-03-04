@@ -1,0 +1,53 @@
+<div class="show-flat">
+    <% @flat.photos.each do |photo| %>
+      <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path photo.key, :width=>300, :height=>200, :crop=>"fill"  , :gravity=>"face" %>);">
+        <% end %>
+          <h2><%= @flat.user.first_name.capitalize %> <%= @flat.user.last_name.capitalize %></h2>
+      </div>
+    </div>
+
+  <div class="container">
+    <div class="d-flex justify-content-around w-100">
+      <div class="w-50 p-4">
+        <div class="card-product-infos">
+          <div style="height: 130px; padding: 15px;">
+            <h4><%= @flat.title %></h4>
+          </div>
+          <div>
+            <div class="tags-infos">
+              <p>ADRESSE : <%= @flat.address %></p>
+            </div>
+            <div class="tags-infos">
+              <p>TYPE DE BIEN : <%= @flat.typology %></p>
+            </div>
+            <div class="tags-infos">
+              <p>ETAT ACTUEL : <%= @flat.current_state %></p>
+            </div>
+            <div class="tags-infos">
+              <p>SURFACE : <%= @flat.area %></p>
+            </div>
+            <div class="tags-infos">
+              <p>ETAT DU BIEN : <%= @flat.appartement_condition %></p>
+            </div>
+            <div class="tags-infos">
+              <p>LOYER : <%= @flat.rent %></p>
+            </div>
+            <div class="tags-infos">
+              <p>CHARGES : <%= @flat.rental_charges %></p>
+            </div>
+
+
+          </div>
+        </div
+
+    </div>
+
+    <div class="container d-flex justify-content-center">
+     <p>
+      <%= link_to 'Supprimer', flat_path(@flat), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-flat our-button' %>
+      <%= link_to 'Modifier', edit_flat_path(@flat), class: 'btn btn-flat our-button' %>
+     </p>
+
+  </div>
+
+</div>
