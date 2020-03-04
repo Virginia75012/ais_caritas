@@ -73,6 +73,18 @@
   background-position: center;
 }
 
+.banner-show {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  h2{
+    color: #fff;
+    font-family: $headers-font;
+  }
+}
+
 
 /** MEDIA QUERIES **/
 @media (max-width: 640px) {
@@ -85,3 +97,4 @@
   }
 
 }
+

@@ -68,3 +68,17 @@
   color: $blue;
 }
 
+.show-flats {
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.show-flats img {
+  object-fit: cover;
+}
+
+.show {
+  margin-bottom: 85px;
+}
+
