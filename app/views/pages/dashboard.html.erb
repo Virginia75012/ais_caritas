@@ -1,16 +1,114 @@
 <div class="container flats">
   <div class="text-center mt-5">
       <h2>TABLEAU DE BORD</h2>
-      <hr>
-    </div>
+  </div>
+
   <div class="row">
-    <div id="map"
-     style="width: 100%;
-     height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    <% @flats.each do |flat| %>
-      <div class="col-xs-4 mt-5 flats">
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Nombre de logements</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.count %></div>
+     </div>
+   </div>
+
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Logements à valider</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:status => false).count %></div>
+     </div>
+   </div>
+
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Logements Libres</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:current_state => "libre").count %></div>
+     </div>
+   </div>
+
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">Logements Occupés</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:current_state => "occupe").count %></div>
+     </div>
+   </div>
+ </div>
+
+<div class="row">
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">STUDIO</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "studio").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T1</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t1").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T2</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t2").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T3</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t3").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T4</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t4").count %></div>
+     </div>
+   </div>
+   <div class="col-xs-4 mx-auto mt-5">
+     <div class="container-fluid count flats">
+       <div class="text-center">
+        <h3 style="font-size: 18px;">T5</h3>
+        </div>
+         <div class="text-center mt-3"><%= @flats.where(:typology => "t5").count %></div>
+     </div>
+   </div>
+  </div>
+  <hr class="mt-5">
+
+  <div class="text-center">
+    <h3>LES PROPOSITIONS</h3>
+  </div>
+
+  <div class="row mt-5">
+      <div class="col-xs-4 offset-3" id="map"
+       style="width: 50%;
+       height: 250px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+       </div>
+  </div>
+
+  <div class="row">
+    <% @flats.reverse_each do |flat| %>
+      <div class="col-xs-4 mt-2 mb-3 flats">
         <div class="card-flat">
           <% flat.photos.each do |photo| %>
           <%= cl_image_tag photo.key %>
@@ -23,9 +121,9 @@
         </div>
         <div class="container icons">
           <% if flat.status == true %>
-            <div class="status">✅</div>
+            <div class="status"><%= image_tag "check.png"%></div>
           <% else %>
-            <%= link_to validate_flat_path(flat), method: :patch, id: "validate-link-#{flat.id}" do %>
+            <%= link_to validate_flat_path(flat), method: :patch, id: "validate-link-#{flat.id}", class: "text-decoration-none" do %>
               <div class="valider">A valider</div>
             <% end %>
           <% end %>
@@ -33,8 +131,6 @@
             <label for="box2" class="validation" id="sweet-alert-trash-<%=flat.id%>">❌</label>
             <%= link_to flat_path(flat), method: :delete, id: "delete-link-#{flat.id}" do %>
             <% end %>
-<!--             <input id="box1" type="checkbox" />
-            <label for="box1">✅</label> -->
         </div>
       </div>
     </div>

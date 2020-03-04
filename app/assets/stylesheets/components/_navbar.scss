@@ -65,7 +65,7 @@ $contrast: darken($main, 10%);
   border-bottom-left-radius: 100vw;
   @include alpha-attribute('background-color', rgba($contrast, 0.8), white);
   @media (min-width: 768px) {
-    width: 28vw;
+    width: 26vw;
   }
   ul {
     height: 100%;
@@ -209,8 +209,7 @@ label.hamburger {
 }
 
 label.hamburger {
-  position: fixed;
-  top: 15px;
+  bottom: 8px;
   right: 50px;
   font-size: 25px;
   width: 68px;

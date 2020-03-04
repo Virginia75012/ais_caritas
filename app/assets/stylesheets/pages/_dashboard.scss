@@ -1,0 +1,61 @@
+.status img {
+  width: 27px;
+}
+
+.status {
+  position: relative;
+  bottom: 48px;
+  left: 86px;
+}
+
+.validation {
+  left: 87px;
+  position: relative;
+}
+
+.validation:hover {
+  cursor: pointer;
+}
+
+.valider:hover {
+  color: green !important;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.valider {
+  position: relative;
+  top: 23px;
+}
+
+.count {
+  width: 230px;
+  padding: 8px 20px;
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+  6px 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  .text-center {
+    font-family: $headers-font;
+    color: $blue;
+  }
+}
+
+.count:hover {
+  cursor: pointer;
+  border-bottom: 1px solid $blue;
+  border-left: 1px solid $blue;
+}
+
+.count.flats {
+  width: 142px;
+  h3 {
+    margin-top: 8px;
+  }
+}
+
+.count.flats:hover {
+  cursor: pointer;
+  border-bottom: 1px solid $blue;
+  border-left: 1px solid $blue;
+}
