@@ -8,4 +8,7 @@ class UserPolicy < ApplicationPolicy
   def dashboard?
     user.admin? == true
   end
+  def show?
+    user.admin? == true
+  end
 end

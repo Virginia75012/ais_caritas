@@ -131,6 +131,7 @@
             <label for="box2" class="validation" id="sweet-alert-trash-<%=flat.id%>">❌</label>
             <%= link_to flat_path(flat), method: :delete, id: "delete-link-#{flat.id}" do %>
             <% end %>
+            <%= link_to "click",  flat_path(flat) %>
         </div>
       </div>
     </div>
