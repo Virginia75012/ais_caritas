@@ -61,3 +61,16 @@ fr:
       not_saved:
         one: "1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e) :"
         other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e) :"
+  activerecord:
+    errors:
+      models:
+        flat:
+          attributes:
+            current_state:
+              inclusion: 'is required'
+            typology:
+              inclusion: 'is required'
+            appartement_condition:
+                inclusion: 'is required'
+            origin_contact:
+              inclusion: 'is required'
