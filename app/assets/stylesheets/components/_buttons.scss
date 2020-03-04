@@ -12,6 +12,22 @@
   }
 }
 
+.my-button {
+  background-color: $gray;
+  padding-right: 20px;
+  padding-left: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff !important;
+  border: none !important;
+  &:hover {
+    background-color: $blue;
+    color: #fff !important;
+  }
+}
+
+
+
 .btn-active {
   background-color: $blue;
   color: #fff !important;

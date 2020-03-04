@@ -12,32 +12,26 @@
     </div>
       <div class="col-6">
         <h3 class="text-center" style="font-size: 20px;">Proposition de <%= @flat.user.first_name.capitalize %> <%= @flat.user.last_name.capitalize %></h3>
-        <ul class="list-group list-group-flush text-center">
+        <ul class="list-group list-group-flush text-center" style="font-size: 17px;">
           <li class="list-group-item"><em><%= @flat.address %></em></li>
-          <li class="list-group-item">Le bien est un  <strong><%= @flat.typology.upcase %></strong></li>
-          <li class="list-group-item">La surface est de  <strong><%= @flat.area %>m²</strong></li>
-          <li class="list-group-item">Le loyer actuel est de <strong><%= @flat.rent %>€</strong></li>
-          <li class="list-group-item">Le montant des charges est de <strong><%= @flat.rental_charges %>€</strong></li>
-          <li class="list-group-item">Etat actuel  <strong><%= @flat.current_state %></strong></li>
-          <li class="list-group-item">Etat du bien  <strong><%= @flat.appartement_condition %></strong></li>
+          <li class="list-group-item">Le bien est un  <strong style="color: #025D90;"><%= @flat.typology.upcase %></strong></li>
+          <li class="list-group-item">La surface est de  <strong style="color: #025D90;"><%= @flat.area %>m²</strong></li>
+          <li class="list-group-item">Le loyer actuel est de <strong style="color: #025D90;"><%= @flat.rent %>€</strong></li>
+          <li class="list-group-item">Le montant des charges est de <strong style="color: #025D90;"><%= @flat.rental_charges %>€</strong></li>
+          <li class="list-group-item">Etat actuel  <strong style="color: #025D90;"><%= @flat.current_state %></strong></li>
+          <li class="list-group-item">Etat du bien  <strong style="color: #025D90;"><%= @flat.appartement_condition %></strong></li>
         </ul>
           <div class="container d-flex justify-content-center mt-5">
-           <p>
-            <%= link_to 'Modifier', edit_flat_path(@flat), class: 'btn btn-flat our-button' %>
-
-            <% if @flat.status == false %>
-              <%= link_to validate_flat_path(@flat), method: :patch, id: "validate-link-#{@flat.id}", class: "text-decoration-none btn our-button" do %>
+           <div class="mr-2">
+              <%= link_to 'Modifier', edit_flat_path(@flat), class: 'btn btn-flat my-button' %>
+           </div>
+           <div>
+              <% if @flat.status == false %>
+                <%= link_to validate_flat_path(@flat), method: :patch, id: "validate-link-#{@flat.id}", class: "text-decoration-none btn our-button" do %>
               Valider
               <% end %>
-
-
-
             <% end %>
-
-
-
-
-           </p>
+           </div>
         </div>
       </div>
   </div>
