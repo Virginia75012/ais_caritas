@@ -1,53 +1,45 @@
-<div class="show-flat">
-    <% @flat.photos.each do |photo| %>
-      <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path photo.key, :width=>300, :height=>200, :crop=>"fill"  , :gravity=>"face" %>);">
+<div class="container show">
+  <div class="text-center mt-5">
+      <h2>LOGEMENT</h2>
+    </div>
+  <div class="row mt-5">
+    <div class="col-6">
+      <div class="show-flats">
+        <% @flat.photos.each do |photo| %>
+          <%= cl_image_tag photo.key %>
         <% end %>
-          <h2><%= @flat.user.first_name.capitalize %> <%= @flat.user.last_name.capitalize %></h2>
       </div>
     </div>
+      <div class="col-6">
+        <h3 class="text-center" style="font-size: 20px;">Proposition de <%= @flat.user.first_name.capitalize %> <%= @flat.user.last_name.capitalize %></h3>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item"><em><%= @flat.address %></em></li>
+          <li class="list-group-item">Le bien est un  <strong><%= @flat.typology.upcase %></strong></li>
+          <li class="list-group-item">La surface est de  <strong><%= @flat.area %>m²</strong></li>
+          <li class="list-group-item">Le loyer actuel est de <strong><%= @flat.rent %>€</strong></li>
+          <li class="list-group-item">Le montant des charges est de <strong><%= @flat.rental_charges %>€</strong></li>
+          <li class="list-group-item">Etat actuel  <strong><%= @flat.current_state %></strong></li>
+          <li class="list-group-item">Etat du bien  <strong><%= @flat.appartement_condition %></strong></li>
+        </ul>
+          <div class="container d-flex justify-content-center mt-5">
+           <p>
+            <%= link_to 'Modifier', edit_flat_path(@flat), class: 'btn btn-flat our-button' %>
 
-  <div class="container">
-    <div class="d-flex justify-content-around w-100">
-      <div class="w-50 p-4">
-        <div class="card-product-infos">
-          <div style="height: 130px; padding: 15px;">
-            <h4><%= @flat.title %></h4>
-          </div>
-          <div>
-            <div class="tags-infos">
-              <p>ADRESSE : <%= @flat.address %></p>
-            </div>
-            <div class="tags-infos">
-              <p>TYPE DE BIEN : <%= @flat.typology %></p>
-            </div>
-            <div class="tags-infos">
-              <p>ETAT ACTUEL : <%= @flat.current_state %></p>
-            </div>
-            <div class="tags-infos">
-              <p>SURFACE : <%= @flat.area %></p>
-            </div>
-            <div class="tags-infos">
-              <p>ETAT DU BIEN : <%= @flat.appartement_condition %></p>
-            </div>
-            <div class="tags-infos">
-              <p>LOYER : <%= @flat.rent %></p>
-            </div>
-            <div class="tags-infos">
-              <p>CHARGES : <%= @flat.rental_charges %></p>
-            </div>
+            <% if @flat.status == false %>
+              <%= link_to validate_flat_path(@flat), method: :patch, id: "validate-link-#{@flat.id}", class: "text-decoration-none btn our-button" do %>
+              Valider
+              <% end %>
 
 
-          </div>
-        </div
 
-    </div>
+            <% end %>
 
-    <div class="container d-flex justify-content-center">
-     <p>
-      <%= link_to 'Supprimer', flat_path(@flat), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-flat our-button' %>
-      <%= link_to 'Modifier', edit_flat_path(@flat), class: 'btn btn-flat our-button' %>
-     </p>
 
+
+
+           </p>
+        </div>
+      </div>
   </div>
-
+</div>
 </div>
