@@ -129,8 +129,12 @@
       <div class="col-xs-4 mt-2 mb-3 flats">
         <%= link_to flat_path(flat) , class: "text-decoration-none" do %>
         <div class="card-flat">
-          <% flat.photos.each do |photo| %>
-          <%= cl_image_tag photo.key %>
+          <% if flat.photos.attached? %>
+              <% flat.photos.each do |photo| %>
+                <%= cl_image_tag photo.key %>
+              <% end %>
+            <% else %>
+            <%= image_tag "https://image.freepik.com/photos-gratuite/modele-jouet-maison-vue-face-cles-arriere-plan-flou_23-2148301690.jpg" %>
           <% end %>
         <div class="card-flat-infos">
           <h2><%= flat.title %></h2>
