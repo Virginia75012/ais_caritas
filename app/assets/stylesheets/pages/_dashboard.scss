@@ -42,7 +42,9 @@
 }
 
 .count:hover {
-  transform: scale(0.98);
+  cursor: pointer;
+  border-bottom: 1px solid $blue;
+  border-left: 1px solid $blue;
 }
 
 .count.flats {
@@ -50,4 +52,10 @@
   h3 {
     margin-top: 8px;
   }
+}
+
+.count.flats:hover {
+  cursor: pointer;
+  border-bottom: 1px solid $blue;
+  border-left: 1px solid $blue;
 }
