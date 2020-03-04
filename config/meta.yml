@@ -1,5 +1,5 @@
 meta_product_name: "AIS Caritas"
 meta_title: "AIS Caritas - Agence Immobilière Sociale"
 meta_description: "Agence Immobilière à Vocation Sociale en Ile-de-France"
-meta_image: "logo.JPG" # should exist in `app/assets/images/`
-twitter_account: "@product_twitter_account"   # required for Twitter Cards
+meta_image: "meta-banner.png" # should exist in `app/assets/images/`
+twitter_account: "@virginiaatenza"   # required for Twitter Cards
