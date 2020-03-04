@@ -127,6 +127,7 @@
   <div class="row">
     <% @flats.reverse_each do |flat| %>
       <div class="col-xs-4 mt-2 mb-3 flats">
+        <%= link_to flat_path(flat) , class: "text-decoration-none" do %>
         <div class="card-flat">
           <% flat.photos.each do |photo| %>
           <%= cl_image_tag photo.key %>
@@ -140,18 +141,10 @@
         <div class="container icons">
           <% if flat.status == true %>
             <div class="status"><%= image_tag "check.png"%></div>
-          <% else %>
-            <%= link_to validate_flat_path(flat), method: :patch, id: "validate-link-#{flat.id}", class: "text-decoration-none" do %>
-              <div class="valider">A valider</div>
             <% end %>
-          <% end %>
-
-            <label for="box2" class="validation" id="sweet-alert-trash-<%=flat.id%>">❌</label>
-            <%= link_to flat_path(flat), method: :delete, id: "delete-link-#{flat.id}" do %>
-            <% end %>
-            <%= link_to "click",  flat_path(flat) %>
         </div>
       </div>
+      <% end %>
     </div>
     <% end %>
   </div>
