@@ -37,8 +37,8 @@
 
 .icons {
   position: absolute;
-  bottom: 8px;
-  left: 345px;
+  bottom: 6px;
+  left: 386px;
 }
 
 .add {
@@ -80,5 +80,9 @@
 
 .show {
   margin-bottom: 85px;
+}
+
+.list-group-flush .list-group-item {
+  border-bottom: 1px solid rgba(205, 216, 223, 1);
 }
 

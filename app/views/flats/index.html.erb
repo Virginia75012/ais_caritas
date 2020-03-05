@@ -24,31 +24,35 @@
   </div>
   <% end %>
 
-  <div class="row">
+  <div class="row mb-5">
     <% @flats.each do |flat| %>
       <div class="col-xs-4 mt-5 flats">
         <div class="card-flat">
-          <% flat.photos.each do |photo| %>
-          <%= cl_image_tag photo.key %>
+          <% if flat.photos.attached? %>
+            <% flat.photos.each do |photo| %>
+              <%= cl_image_tag photo.key %>
+            <% end %>
+          <% else %>
+            <%= image_tag "https://image.freepik.com/photos-gratuite/modele-jouet-maison-vue-face-cles-arriere-plan-flou_23-2148301690.jpg" %>
           <% end %>
         <div class="card-flat-infos">
           <h2><%= flat.title %></h2>
           <p><%= flat.address %></p>
           <p><%= flat.area %>m²</p>
-          <p><%= flat.typology %></p>
+          <p><%= flat.typology.upcase %></p>
         </div>
         <div class="container icons">
            <% if flat.status == true %>
-            <div class="status">🟢</div>
+            <div class="status-owner"><%= image_tag "check.png"%></div>
           <% else %>
-            <div class="status">🔴</div>
+            <div class="status-owner">🔴</div>
           <% end %>
-            <label for="box2" id="sweet-alert-trash-<%=flat.id%>" class="btn btn-flat our-button alt"><i class="far fa-trash-alt"></i></label>
+            <label for="box2" id="sweet-alert-trash-<%=flat.id%>" class="btn btn-flat our-button alt" style="padding: 5px 12px;"><i class="far fa-trash-alt fa-sm"></i></label>
             <%= link_to flat_path(flat), method: :delete, id: "delete-link-#{flat.id}" do %>
             <% end %>
 
-            <%= link_to edit_flat_path(flat), class: 'btn btn-flat our-button mb-2' do %>
-              <i class="far fa-edit"></i>
+            <%= link_to edit_flat_path(flat), class: 'btn btn-flat our-button mb-2', style:'padding: 5px 12px;' do %>
+              <i class="far fa-edit fa-sm"></i>
             <% end %>
         </div>
       </div>

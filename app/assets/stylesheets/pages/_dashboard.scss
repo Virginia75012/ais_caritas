@@ -4,8 +4,18 @@
 
 .status {
   position: relative;
-  bottom: 48px;
-  left: 86px;
+  bottom: 0px;
+  left: 54px;
+}
+
+.status-owner {
+  position: relative;
+  bottom: 49px;
+  left: 49px;
+}
+
+.status-owner img {
+  width: 27px;
 }
 
 .validation {
@@ -35,16 +45,25 @@
   box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
   6px 6px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  background-color: $gray;
   .text-center {
     font-family: $headers-font;
     color: $blue;
   }
 }
 
+.count .text-center {
+  color:#fff;
+  margin: 6px 0px;
+  height: 15px;
+  line-height: 0.7;
+  font-weight: bold;
+}
+
 .count:hover {
   cursor: pointer;
-  border-bottom: 1px solid $blue;
-  border-left: 1px solid $blue;
+  border-bottom: 3px solid $blue;
+  border-left: 3px solid $blue;
 }
 
 .count.flats {
@@ -56,6 +75,6 @@
 
 .count.flats:hover {
   cursor: pointer;
-  border-bottom: 1px solid $blue;
-  border-left: 1px solid $blue;
+  border-bottom: 3px solid $blue;
+  border-left: 3px solid $blue;
 }

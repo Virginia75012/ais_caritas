@@ -18,6 +18,11 @@ class PagesController < ApplicationController
 
   def dashboard
     @flats = Flat.all.geocoded
+
+    if params[:filter]
+      @flats = @flats.where(typology: params[:filter][:typology])
+    end
+
     authorize current_user
     @markers = @flats.map do |flat|
       {
