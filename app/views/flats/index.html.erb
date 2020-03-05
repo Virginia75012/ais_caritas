@@ -15,14 +15,21 @@
     </div>
   </div>
 
-  <% flash.each do |name, msg| %>
-  <div class="alert alert-success" role="alert">
-  <%= msg %>
-  <button type="button" class="close pl-2" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  </div>
-  <% end %>
+  <% if danger %>
+    <div class="alert alert-danger alert-dismissible fade show m-1" role="alert">
+      <%= danger %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% elsif success %>
+    <div class="alert alert-success alert-dismissible fade show m-1" role="alert">
+      <%= success %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+<% end %>
 
   <div class="row mb-5">
     <% @flats.each do |flat| %>
@@ -43,7 +50,7 @@
         </div>
         <div class="container icons">
            <% if flat.status == true %>
-            <div class="status-owner"><%= image_tag "check.png"%></div>
+            <div class="status-owner"><i class="fas fa-check-circle fa-lg" style="color: #21bf73;"></i></div>
           <% else %>
             <div class="status-owner">🔴</div>
           <% end %>
