@@ -32,7 +32,7 @@
            </div>
            <div>
               <% if @flat.status == false %>
-                <%= link_to validate_flat_path(@flat), method: :patch, id: "validate-link-#{@flat.id}", class: "text-decoration-none btn our-button" do %>
+                <%= link_to validate_flat_path(@flat), method: :patch, id: "validate-link-#{@flat.id}", class: "text-decoration-none btn btn-validate" do %>
               Valider
               <% end %>
             <% end %>
