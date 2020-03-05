@@ -19,7 +19,7 @@ ashley = User.create!(first_name: "ashley", last_name: "hozé", email: "ashleyho
 benjamin = User.create!(first_name: "benjamin", last_name: "dupont", email: "pdp@gmail.com", password: "123456")
 xavier = User.create!(first_name: "xavier", last_name: "tl", email: "xavier@tl.com", password: "123456")
 
-puts "creating gp..."
+puts "creating flats..."
 beau = Flat.create!(user: nathalie, typology: "t2", area: "30", title:"Joli appartement", address: "3 rue Roger Salengro, CRETEIL", rent: 300, rental_charges: 26, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
 moche = Flat.create!(user: nathalie, typology: "t3", area: "37", title:"Bel emplacement", address: "13 avenue Daumesnil, PARIS", rent: 400, rental_charges: 260, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre", status: true)
 normal = Flat.create!(user: nathalie, typology: "t4", area: "70", title:"Idéal famille", address: "94 rue du Faubourg Saint-Antoine, PARIS", rent: 1000, rental_charges: 400, current_state: "libre", appartement_condition: "neuf", message: "bla", origin_contact: "autre")
@@ -31,11 +31,11 @@ mam = Flat.create!(user: xavier, typology: "t4", area: "76", title:"Proche du m�
 
 puts "done"
 
-file = URI.open("https://avatars3.githubusercontent.com/u/57186441?v=4")
+file = URI.open("https://res.cloudinary.com/du2om2w67/image/upload/v1583423927/nathalie_uqn4im.jpg")
 nathalie.avatar.attach(io: file, filename: "nathalie_avatar")
 nathalie.save!
 
-file = URI.open("https://avatars3.githubusercontent.com/u/29464477?v=4")
+file = URI.open("https://res.cloudinary.com/du2om2w67/image/upload/v1583423927/julia_p1wtla.jpg")
 julia.avatar.attach(io: file, filename: "julia_avatar")
 julia.save!
 

@@ -1,6 +1,6 @@
 class FlatPolicy < ApplicationPolicy
   def index?
-    record.user == user
+    user.admin? == false && record.user == user
   end
 
   def show?

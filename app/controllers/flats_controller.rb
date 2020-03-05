@@ -1,4 +1,6 @@
 class FlatsController < ApplicationController
+  before_action :ensure_user_is_owner, only: [:index, :new, :create, :destroy]
+
   def index
     @flats = policy_scope(Flat).order(created_at: :desc)
   end
@@ -41,8 +43,8 @@ class FlatsController < ApplicationController
     @flat.destroy
     authorize @flat
 
-    if current_user.admin
-      redirect_to dashboard_path, danger: "Annonce bien supprimée"
+    if current_user
+      redirect_to flats_path, danger: "Annonce bien supprimée"
     else
       redirect_to flats_path
     end
@@ -69,5 +71,11 @@ class FlatsController < ApplicationController
 
   def flat_params
     params.require(:flat).permit( :title, :address, :typology, :area, :rent, :rental_charges, :current_state, :appartement_condition, :origin_contact, :message, :photos)
+  end
+
+  def ensure_user_is_owner
+    return unless current_user.admin?
+
+    user_not_authorized
   end
 end
